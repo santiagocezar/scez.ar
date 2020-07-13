@@ -23,9 +23,13 @@ h1 {
     animation: wow 5s linear 0s infinite;
 }
 
+
 @keyframes wow {
     0% {
         transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    }
+    50% {
+        color: #59ffac;
     }
     100% {
         transform: rotateY(360deg) rotateX(360deg ) rotateZ(360deg);
