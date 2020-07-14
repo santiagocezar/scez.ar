@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    text-align: center;
     background-color: #03001b;
     color: #59f4ff;
 }
@@ -51,23 +52,40 @@ body {
     }
 }
 
+.arrow {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    left: calc(50% - 32px);
+    bottom: 16px;
+    width: 64px;
+    height: 64px;
+}
+
 main {
     padding: 32px;
+    max-width: 1366px;
+    border-radius: 32px 32px 0 0;
+    display: inline-block;
+    text-align: left;
     background-color: #01000c;
 }
+
 
 main h1, main h2 {
     color: white;
 }
 
 .ej {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-flow: row wrap;
     gap: 32px;
 }
 
 .ej a {
     display: flex;
+    flex: 1 0 calc(21% - 32px);
     flex-direction: column;
     align-items: center;
     text-decoration: none;
@@ -78,6 +96,11 @@ main h1, main h2 {
     text-align: center;
     z-index: 10;
     border-radius: 16px;
+    transition: scale .7s ease;
+}
+
+.ej a:hover {
+    scale: 1.05;
 }
 
 .ej .img {
@@ -132,6 +155,6 @@ main h1, main h2 {
 
 @media screen and (max-width: 900px) {
     .ej {
-        grid-template-columns: 1fr;
+        /*grid-template-columns: 1fr;*/
     }
 }
