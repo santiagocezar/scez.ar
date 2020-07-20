@@ -21,6 +21,9 @@
     </defs>
     </svg>
 
+
+
+
     <div class="links">
         <a href="https://github.com/santiagocezar">
             <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
@@ -39,6 +42,7 @@
         <path stroke="#ffffff" stroke-width="4" fill="none" d="M 16 16 L 32 32 L 48 16"></path>
     </svg>
     <main>
+        <p id="warn83" hidden>⚠ Parece que estas usando Chrome 83 o inferior. Esta página se ve mejor en Chrome 84 o superior o Firefox</p>
         <h1>Hola, soy Santiago Cézar y hago cosas usando código</h1>
         <p><small>generalmente mejores que ese título</small></p>
         <br>
@@ -72,5 +76,12 @@
             </a>
         </div>
     </main>
+    
+    <script>
+        let ver = Number(navigator.appVersion.match(/.*Chrome\/([0-9]+)/)[1])
+        if (!isNaN(ver) && ver < 84) {
+            document.getElementById('warn83').removeAttribute('hidden')
+        }
+    </script>
 </body>
 </html>
