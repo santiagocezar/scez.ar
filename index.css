@@ -37,6 +37,7 @@ body {
     justify-content: center;
 }
 .container h1 {
+    text-shadow: white 0px 0px 32px;
     font-size: 10vw;
 }
 
