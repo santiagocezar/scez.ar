@@ -6,6 +6,7 @@
 
 html {
     scrollbar-color: #aaa #fff;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
 .container {
     color: #000;
     width: 100%;
-    height: calc(100vh - 56px);
+    height: calc(100vh - 72px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,6 +63,7 @@ body {
 main {
     padding: 32px;
     padding-top: 64px;
+    border-top: 8px solid transparent;
     max-width: 1366px;
     border-radius: 32px 32px 0 0;
     display: inline-block;
