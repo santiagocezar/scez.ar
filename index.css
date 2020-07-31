@@ -4,6 +4,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.no-show {
+    display: none;
+}
+
 html {
     scrollbar-color: #aaa #fff;
     scroll-behavior: smooth;
