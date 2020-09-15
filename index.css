@@ -17,11 +17,11 @@ body {
     text-align: center;
     background-color: #fff;
     background-image: url("tile.svg");
-    background-size: 72px;
+    background-size: 192px;
     background-attachment: fixed;
     background-repeat: repeat;
     color: #262447;
-    animation: loop 4s linear infinite;
+    animation: loop 10s linear infinite;
 }
 
 @keyframes loop {
@@ -30,7 +30,7 @@ body {
     }
 
     100% {
-        background-position: -72px -72px;
+        background-position: -192px -192px;
     }
 }
 
