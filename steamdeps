@@ -1,1 +1,0 @@
-pkexec dnf install alsa-lib alsa-plugins-pulseaudio gamemode gtk2 libXScrnSaver libXext libXinerama libXtst libatomic libcurl firewalld-filesystem gamemode libdbusmenu-gtk3 libnsl libpng12 libva libvdpau mesa-dri-drivers mesa-dri-drivers mesa-libGL mesa-vulkan-drivers mesa-vulkan-drivers nss pulseaudio-libs systemd-libs tar vulkan-loader vulkan-loader zenity 
