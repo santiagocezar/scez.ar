@@ -12,22 +12,43 @@ html {
 
 body {
   text-align: center;
-  background-color: #fff;
+  background-attachment: fixed;
+  background-color: #eee;
   color: black; }
+  body .bgextra {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("tile.svg");
+    background-attachment: fixed;
+    color: black;
+    background-size: 256px;
+    background-repeat: repeat;
+    animation: loop 15s linear infinite;
+    z-index: -1; }
 
 @keyframes loop {
   0% {
     background-position: 0px 0px; }
   100% {
-    background-position: -192px -192px; } }
+    background-position: -256px -256px; } }
 .title {
   color: #000;
   width: 100%;
-  margin: 48px 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   line-height: .9; }
+  .title .seemore {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 32px;
+    color: white;
+    background-color: black;
+    padding: 8px; }
 
 /*
 .title h1 {
@@ -41,7 +62,9 @@ body {
 }
 */
 .weird {
-  text-align: center; }
+  margin-top: 16px;
+  text-align: center;
+  line-height: normal; }
 
 .weird h1 {
   font-weight: 800;
@@ -79,7 +102,8 @@ main {
   border-radius: 32px 32px 0 0;
   display: inline-block;
   text-align: left;
-  background-color: #eee; }
+  background-color: #ffffff;
+  box-shadow: 0px 0px 16px #0004; }
 
 main h1,
 main h2 {
