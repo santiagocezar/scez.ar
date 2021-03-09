@@ -9,7 +9,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="favicon.svg"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    id="svg872"
    version="1.1"
    viewBox="0 0 8.4666659 8.4666662"
@@ -106,19 +106,19 @@
      inkscape:window-maximized="1"
      inkscape:window-y="0"
      inkscape:window-x="0"
-     inkscape:window-height="704"
+     inkscape:window-height="713"
      inkscape:window-width="1366"
      inkscape:guide-bbox="true"
-     showguides="false"
+     showguides="true"
      inkscape:snap-smooth-nodes="true"
      units="px"
      showgrid="true"
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="15.500334"
-     inkscape:cx="13.02672"
-     inkscape:zoom="12.938362"
+     inkscape:cy="21.476528"
+     inkscape:cx="31.620604"
+     inkscape:zoom="9.1488032"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -140,7 +140,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -150,26 +150,26 @@
      inkscape:groupmode="layer"
      inkscape:label="Capa 1">
     <rect
-       ry="0"
+       ry="3.1750019"
        y="144.63318"
        x="217.58174"
        height="8.4666662"
        width="8.4666662"
        id="rect877"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.0649999;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill" />
+       style="opacity:1;fill:#040624;stroke-width:0.0649999;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;fill-opacity:1" />
     <path
        sodipodi:nodetypes="ccccccccccccccccc"
        d="m 218.64009,148.33743 v 0.26459 1.32287 c 0,1.169 0.94766,2.11667 2.11666,2.11667 h 1.3229 0.26458 v -0.26459 -0.52916 -0.26459 h -0.26458 -1.3229 c -0.5845,0 -1.05833,-0.47383 -1.05833,-1.05833 v -1.32287 -0.26459 h -0.26458 -0.52917 z"
-       style="opacity:1;fill:#ff66ff;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       style="opacity:1;fill:#ff4294;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="path1616" />
     <path
        id="path1618"
        d="m 221.28594,147.27902 v 0.26458 1.85209 a 1.0583334,1.0583334 0 0 0 1.04231,1.05833 h 0.016 v -0.26458 -1.85209 a 1.0583334,1.0583334 0 0 0 -1.04231,-1.05833 z"
-       style="opacity:1;fill:#8877ff;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
+       style="opacity:1;fill:#898bcb;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
     <path
        sodipodi:nodetypes="ccccccccccccccccc"
        d="m 221.2859,145.69155 v 0.26459 0.52916 0.26459 h 0.26458 1.32294 c 0.5845,0 1.05834,0.47383 1.05834,1.05833 v 1.32295 0.26459 h 0.26458 0.52917 0.26458 v -0.26459 -1.32295 c 0,-1.16901 -0.94766,-2.11667 -2.11667,-2.11667 h -1.32294 z"
-       style="opacity:1;fill:#22ccff;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       style="opacity:1;fill:#18d1ff;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="path1620" />
   </g>
 </svg>
