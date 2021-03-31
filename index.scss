@@ -4,9 +4,6 @@
     font-family: 'Manrope', sans-serif;
 }
 
-.no-show {
-    display: none;
-}
 
 html {
     scrollbar-color: #aaa #fff;
@@ -14,68 +11,65 @@ html {
 }
 
 body {
-    text-align: center;
     //background: linear-gradient(lighten($color: #18d1ff, $amount: 30), lighten($color: #ff4294, $amount: 30));
     background-attachment: fixed;
-    background-color: #eee;
+    background-color: white;
     color: black;
+}
 
-    .bgextra {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: url("tile.svg");
-        background-attachment: fixed;
-        color: black;
-        background-size: 256px;
-        background-repeat: repeat;
-        animation: loop 15s linear infinite;
-        z-index: -1;
+.links {
+    display: flex;
+    padding: 8px;
+    gap: 16px;
+}
+
+.links a {
+    text-decoration: none;
+    display: block;
+    svg {
+        width: 32px;
+        height: 32px;
     }
 }
 
-@keyframes loop {
-    0% {
-        background-position: 0px 0px;
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    gap: .2em;
+    img {
+        height: 2em;
     }
-
-    100% {
-        background-position: -256px -256px;
+    div {
+        text-align: left;
+        font-weight: bold;
+        line-height: .9;
     }
 }
 
 .title {
     color: #000;
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     line-height: .9;
+}
 
-    .seemore {
-        color: inherit;
-        text-decoration: none;
-        font-weight: 900;
-        font-size: 32px;
-        color: white;
-        background-color: black;
-        padding: 8px;
+.button {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 32px;
+    color: white;
+    background-color: #040624;
+    padding: 8px;
+    transition: box-shadow .2s ease;
+    &:hover {
+        box-shadow: -.4em .2em #ff4294, .4em -.2em #18d1ff;
     }
 }
-
-/*
-.title h1 {
-    text-shadow: white 0px 0px 32px;
-    font-size: 64px;
-    background-image: url("tile.svg");
-    background-size: 192px;
-    background-attachment: fixed;
-    background-repeat: repeat;
-    animation: loop 10s linear infinite;
-}
-*/
 
 .weird {
     margin-top: 16px;
@@ -96,16 +90,6 @@ body {
     margin: 48px;
     margin-top: 0;
     color: black;
-}
-
-@keyframes wow {
-    0% {
-        transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
-    }
-
-    100% {
-        transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
-    }
 }
 
 .arrow {
@@ -198,7 +182,6 @@ main>h2 {
 
 header {
     display: flex;
-    position: fixed;
     width: 100%;
     height: 48px;
     align-items: center;
@@ -220,11 +203,6 @@ header {
     }
 
     transition: all ease .4s;
-}
-
-.links a {
-    text-decoration: none;
-    padding: 12px;
 }
 
 @media screen and (max-width: 768px) {
