@@ -1,80 +1,117 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Manrope', sans-serif; }
+  font-family: "Manrope", sans-serif;
+}
 
 html {
   scrollbar-color: #aaa #fff;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+}
 
 body {
-  background-attachment: fixed;
-  background-color: white;
-  color: black; }
-
-.links {
-  display: flex;
-  padding: 8px;
-  gap: 16px; }
-
-.links a {
-  text-decoration: none;
-  display: block; }
-  .links a svg {
-    width: 32px;
-    height: 32px; }
-
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 40px;
-  gap: .2em; }
-  .logo img {
-    height: 2em; }
-  .logo div {
-    text-align: left;
-    font-weight: bold;
-    line-height: .9; }
-
-.title {
-  color: #000;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  line-height: .9; }
+  background-color: #040624;
+  color: white;
+}
 
 .button {
   color: inherit;
   text-decoration: none;
   font-weight: 900;
-  font-size: 32px;
+  font-size: 30px;
   color: white;
   background-color: #040624;
   padding: 8px;
-  transition: box-shadow .2s ease; }
-  .button:hover {
-    box-shadow: -.4em .2em #ff4294, .4em -.2em #18d1ff; }
+  transition: box-shadow 0.2s ease;
+}
+.button:hover {
+  box-shadow: -0.4em 0.2em #ff4294, 0.4em -0.2em #18d1ff;
+}
 
-.weird {
-  margin-top: 16px;
-  text-align: center;
-  line-height: normal; }
+.heading {
+  font-size: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5em;
+  padding: 1em;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-attachment: fixed;
+  background-color: white;
+  background: linear-gradient(#fffa, transparent), url("img/bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 768px) {
+  .heading {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+.heading .button {
+  grid-column-start: -2;
+  align-self: end;
+  justify-self: end;
+}
 
-.weird h1 {
-  font-weight: 800;
-  display: inline-block;
-  max-width: 480px;
-  padding: 32px 0;
-  border-image-source: url(/img/underline.svg);
-  border-image-slice: 16 0;
-  border-top: solid 16px;
-  border-bottom: solid 16px;
-  border-image-repeat: round;
-  margin: 48px;
-  margin-top: 0;
-  color: black; }
+.links {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0.25em 0.5em;
+  background-color: white;
+  align-self: start;
+  justify-self: end;
+  gap: 0.5em;
+}
+
+.links a {
+  text-decoration: none;
+  display: block;
+}
+.links a svg {
+  width: 0.8em;
+  height: 0.8em;
+}
+
+.logo {
+  display: grid;
+  background: white;
+  color: #040624;
+  align-items: center;
+  align-self: start;
+  padding: 0.5em;
+  grid-template-columns: 2em auto;
+  grid-template-rows: 2em auto;
+  gap: 0.2em;
+}
+.logo img {
+  height: 100%;
+}
+.logo div {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  line-height: 0.9;
+}
+.logo h2 {
+  grid-column: span 2;
+  font-size: 0.6em;
+}
+
+#about-me {
+  padding: 2em;
+  font-size: 30px;
+}
+#about-me p {
+  max-width: 24em;
+  background-color: white;
+  color: #040624;
+  box-shadow: -0.4em 0.2em #ff4294, 0.4em -0.2em #18d1ff;
+  padding: 1em;
+}
 
 .arrow {
   position: absolute;
@@ -84,57 +121,74 @@ body {
   left: calc(50% - 32px);
   bottom: -6px;
   width: 64px;
-  height: 64px; }
+  height: 64px;
+}
 
 main {
-  padding: 32px;
+  padding: 0 1em 2em 1em;
+  box-sizing: border-box;
   border-top: 8px solid transparent;
-  max-width: 948px;
-  border-radius: 32px 32px 0 0;
-  display: inline-block;
-  text-align: left;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 16px #0004; }
-
-main h1,
-main h2 {
-  color: black; }
-
-main > h2 {
-  padding-bottom: 8px;
-  border-bottom: 4px solid #ff4294; }
-
-.ej {
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  gap: 32px; }
-  .ej a {
-    display: flex;
-    flex: 1 0 calc(33% - 32px);
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    justify-content: space-between;
-    background-color: var(--c);
-    padding-bottom: 16px;
-    text-align: center;
-    z-index: 10;
-    border-radius: 16px;
-    transition: scale .7s ease; }
-    .ej a:hover {
-      scale: 1.05; }
-    .ej a h1,
-    .ej a p {
-      color: var(--f);
-      margin: 0 8px; }
-  .ej img {
-    position: relative;
-    height: 256px;
-    object-fit: cover;
-    width: 100%;
-    border-radius: 16px;
-    margin-bottom: 8px; }
+  flex-direction: column;
+  align-items: center;
+}
+main > h1 {
+  margin-bottom: 1em;
+}
+
+.projects {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 948px;
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+.projects a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  justify-content: space-between;
+  background-color: white;
+  color: #040624;
+  padding: 1em;
+  gap: 1em;
+  text-align: center;
+  z-index: 10;
+  transition: scale 0.7s ease;
+  transition: box-shadow 0.2s ease;
+}
+.projects a:hover {
+  box-shadow: -0.8em 0.4em var(--c), 0.8em -0.4em var(--f);
+}
+.projects .aspect1-1 {
+  width: 100%;
+}
+.projects img {
+  object-fit: cover;
+}
+
+.aspect1-1 {
+  position: relative;
+  flex-shrink: 0;
+}
+.aspect1-1::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.aspect1-1 img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .icon {
   display: inline-block;
@@ -142,7 +196,8 @@ main > h2 {
   height: 24px;
   stroke-width: 0;
   stroke: none;
-  fill: white; }
+  fill: white;
+}
 
 header {
   display: flex;
@@ -153,18 +208,17 @@ header {
   left: 0;
   top: 0;
   z-index: 99;
-  transition: all ease .4s; }
-  header nav a {
-    margin-left: 16px;
-    color: inherit;
-    font-weight: bold;
-    text-decoration: none; }
-  header.passed {
-    background-color: white;
-    box-shadow: #00000040 0 2px 4px; }
-
-@media screen and (max-width: 768px) {
-  .ej a {
-    flex-basis: 100%; } }
+  transition: all ease 0.4s;
+}
+header nav a {
+  margin-left: 16px;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+header.passed {
+  background-color: white;
+  box-shadow: #00000040 0 2px 4px;
+}
 
 /*# sourceMappingURL=index.css.map */
