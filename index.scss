@@ -6,6 +6,7 @@
 
 
 html {
+    font-size: 16px;
     scrollbar-color: #aaa #fff;
     scroll-behavior: smooth;
 }
@@ -39,8 +40,8 @@ body {
     grid-template-rows: 1fr 1fr;
 
     @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: min-content 1fr;
+        font-size: 30px;
     }
 
     gap: .5em;
@@ -60,19 +61,22 @@ body {
     background-attachment: fixed;
 
     .button {
-        grid-column-start: -2;
+        grid-row-end: -1;
+        grid-column-end: -1;
         align-self: end;
         justify-self: end;
     }
 }
 
 .links {
+    grid-column-start: 1;
+    grid-row-end: -1;
     display: flex;
     box-sizing: border-box;
     padding: .25em .5em;
     background-color: white;
-    align-self: start;
-    justify-self: end;
+    align-self: end;
+    justify-self: start;
     gap: .5em;
 }
 
@@ -108,17 +112,48 @@ body {
         grid-column: span 2;
         font-size: .6em;
     }
+    @media screen and (max-width: 768px) {
+        grid-column: span 2;
+    }
 }
 
 #about-me {
-    padding: 2em;
-    font-size: 30px;
-    p {
-        max-width: 24em;
-        background-color: white;
-        color: #040624;
-        box-shadow: -.4em .2em #ff4294, .4em -.2em #18d1ff;
-        padding: 1em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 4em 2rem;
+    blockquote {
+        max-width: 16em;
+    }
+}
+
+blockquote {
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+
+    &::before, &::after {
+        position: absolute;
+        font-size: 8rem;
+    }
+
+    &::before{
+        top: -4rem;
+        translate: -50% 0;
+        left: 0;
+        content: '🙶';
+        color: #ff4294;
+    }
+    &::after{
+        bottom: -3.2rem;
+        translate: 50% 0;
+        right: 0;
+        content: '🙸';
+        color: #18d1ff;
     }
 }
 
@@ -236,4 +271,60 @@ header {
     }
 
     transition: all ease .4s;
+}
+
+.featured-card {
+    display: grid;
+    grid-template:
+        "content preview" 18rem
+        / 50% 50%;
+        
+    color: #040624;
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 1rem;
+
+    .preview {
+        grid-area: preview;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        mask: linear-gradient(to right, transparent, black);
+        -webkit-mask: linear-gradient(to right, transparent, black);
+    }
+    .content {
+        grid-area: content;
+        font-size: 1.5rem;
+        padding: 2em;
+        padding-right: 0;
+        .title {
+            font-size: 1.8em;
+            height: 1.2em;
+        }
+    }
+
+    .button {
+        grid-area: preview;
+        align-self: end;
+        justify-self: end;
+        margin: 1rem;
+        z-index: 1;
+    }
+    @media screen and (max-width: 768px) {
+        grid-template:
+            "content" min-content
+            "preview" 18rem
+            / auto;
+        
+        .content {
+            padding: 2rem;
+            font-size: 1.2rem;
+        }
+        .preview {
+            mask: unset;
+            -webkit-mask: unset;
+        }
+    }
 }

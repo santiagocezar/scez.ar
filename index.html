@@ -61,10 +61,10 @@
     </div>
 
     <div id="about-me">
-        <p>
+        <blockquote>
             Me llamo Santiago Cézar, soy estudiante de programación en la
             Escuela ProA. Hago diseños, pagínas web y programas
-        </p>
+        </blockquote>
     </div>
 
     <!--
@@ -81,73 +81,53 @@
         <p id="warn83" hidden>⚠ Parece que estas usando Chrome 83 o inferior. Esta página se ve mejor en Chrome 84 o
             superior o Firefox</p>
 
-        <h1 id="proyectos">Proyectos</h1>
-        <div class="projects">
-            <a href="#" style="--c:#e988cc; --f:#8fbde4;">
-                <div class="aspect1-1">
-                    <img src="img/snow.webp" />
-                </div>
-                <h1>Diseño 3D para videojuegos</h1>
-                <p>Con Blender, un software de modelado open-source.</p>
-            </a>
-            <a href="https://elbarquito.com.ar/" style="--c:#01d8b4; --f:#ed0578">
-                <div class="aspect1-1">
-                    <img src="img/ebo.webp" />
-                </div>
-                <h1>El Barquito</h1>
-                <p>Un tienda online para realizar pedidos.</p>
-            </a>
-            <a href="https://score.scez.ar/" style="--c:#ff007f; --f:#e1c13f;">
-                <div class="aspect1-1">
-                    <img src="img/score.svg" />
-                </div>
-                <h1>Sc⚃re</h1>
-                <p>Un contador de puntos para juegos de mesa.</p>
-            </a>
-            <a href="https://aqua24j4.itch.io/dodgestar" style="--c:#91f2ff; --f:#e64b55;">
-                <div class="aspect1-1">
-                    <img src="img/dodge.webp" />
-                </div>
-                <h1>Dodgestar</h1>
-                <p>Un sencillo juego sobre esquivar objetos espaciales.</p>
-            </a>
-            <a href="https://www.omgubuntu.co.uk/2019/06/kde-plasma-5-16-wallpaper" style="--c:#d1eaf8; --f:#003f88;">
-                <div class="aspect1-1">
-                    <img src="img/icecold.webp" />
-                </div>
-                <h1>Ice Cold</h1>
-                <p>Fondo de pantalla elegido para KDE Plasma 5.16.</p>
-            </a>
-            <a href="https://github.com/santiagocezar/piwrite" style="--c:#14a5f8; --f:#19b16a;">
-                <div class="aspect1-1">
-                    <img src="img/piwrite.webp" />
-                </div>
-                <h1>πWrite</h1>
-                <p>Entrada de texto diseñada para joysticks.</p>
-            </a>
-            <a href="https://github.com/santiagocezar/hora-proa" style="--c:#f74570; --f:#22bed4;">
-                <div class="aspect1-1">
-                    <img src="img/horaproa.webp" />
-                </div>
-                <h1>Hora ProA</h1>
-                <p>Una planilla de horarios y administrador de tareas escolar.</p>
-            </a>
-            <a href="https://cloud.scez.ar/index.php/s/eWnxcaxBKoFdpSe" style="--c:#813915; --f:#76995a;">
-                <div class="aspect1-1">
-                    <img src="img/covidmc.webp" />
-                </div>
-                <h1>COVID-MC</h1>
-                <p>Un paquete de recursos para Minecraft que agrega barbijos.</p>
-            </a>
-            <a href="https://cloud.scez.ar/index.php/s/eWnxcaxBKoFdpSe" style="--c:#1d1ac7; --f:#e0c52c;">
-                <div class="aspect1-1">
-                    <img src="img/platformer.webp" />
-                </div>
-                <h1>DodgeBoom</h1>
-                <p>Un juego para movil de esquivar bombas.</p>
-            </a>
-
+        <div class="featured-card">
+            <img src="img/3d_model.webp" alt="Modelo 3D de ejemplo" class="preview">
+            <div class="content">
+                <h1 class="title">Modelado 3D</h1>
+                <p>Diseño de modelos 3D para videojuegos e impresiones.</p>
+            </div>
         </div>
+        <div class="featured-card">
+            <img src="img/peon_screenshot.webp" alt="Captura de pantalla de PEON" class="preview">
+            <div class="content">
+                <img src="img/peon.svg" alt="PEON Logo" class="title">
+                <p>Un sistema sencillo para la creación de tiendas online.</p>
+            </div>
+        </div>
+        <div class="featured-card">
+            <img src="img/score_screenshot.webp" alt="Captura de pantalla de Score" class="preview">
+            <div class="content">
+                <img src="img/score.svg" alt="Score Logo" class="title">
+                <p>Una aplicación web para el conteo de puntos en juegos de mesa.</p>
+            </div>
+            <a href="https://score.scez.ar" class="button">Probar</a>
+        </div>
+        <div class="featured-card">
+            <img src="img/dodge.webp" alt="Captura de pantalla de Score" class="preview">
+            <div class="content">
+                <h1 class="title">Videojuegos </h1>
+                <p>Desarrollo de juegos para PC y móvil</p>
+            </div>
+            <a href="https://aqua24j4.itch.io/dodgestar" class="button">+ info</a>
+        </div>
+        <div class="featured-card">
+            <img src="img/icecold.webp" alt="Captura de pantalla de Score" class="preview">
+            <div class="content">
+                <h1 class="title">Diseño Gráfico</h1>
+                <p>Diseño 2D de logos o fondos minimalistas</p>
+            </div>
+            <a href="https://www.omgubuntu.co.uk/2019/06/kde-plasma-5-16-wallpaper" class="button">+ info</a>
+        </div>
+        <div class="featured-card">
+            <img src="img/gh_screenshot.webp" alt="Captura de pantalla de Score" class="preview">
+            <div class="content">
+                <h1 class="title">...y etc.</h1>
+                <p>En mi GitHub podes encontrar otros proyectos open-source que hice o en los que colaboré.</p>
+            </div>
+            <a href="https://github.com/santiagocezar" class="button">Ir a GitHub</a>
+        </div>
+
     </main>
 
 
