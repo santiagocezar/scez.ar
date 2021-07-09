@@ -126,29 +126,36 @@ blockquote {
   text-align: center;
   padding: 1rem;
   font-size: 2rem;
+  border: 2rem solid transparent;
+  border-image-source: url("quote.svg");
+  border-image-slice: 9 fill;
+  border-image-width: 4rem;
+  /*
+      &::before, &::after {
+          position: absolute;
+          font-size: 8rem;
+      }
+
+      &::before{
+          top: -4rem;
+          translate: -50% 0;
+          left: 0;
+          content: '“';
+          color: #ff4294;
+      }
+      &::after{
+          bottom: -3.5rem;
+          translate: 50% 0;
+          right: 0;
+          content: '„';
+          color: #18d1ff;
+      }
+      */
 }
 @media screen and (max-width: 768px) {
   blockquote {
     font-size: 1.5rem;
   }
-}
-blockquote::before, blockquote::after {
-  position: absolute;
-  font-size: 8rem;
-}
-blockquote::before {
-  top: -4rem;
-  translate: -50% 0;
-  left: 0;
-  content: "🙶";
-  color: #ff4294;
-}
-blockquote::after {
-  bottom: -3.2rem;
-  translate: 50% 0;
-  right: 0;
-  content: "🙸";
-  color: #18d1ff;
 }
 
 .arrow {
@@ -296,6 +303,7 @@ header.passed {
 }
 @media screen and (max-width: 768px) {
   .featured-card {
+    margin-bottom: 4rem;
     grid-template: "content" min-content "preview" 18rem/auto;
   }
   .featured-card .content {
