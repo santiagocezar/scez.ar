@@ -11,8 +11,11 @@
     }
 });*/
 
-const height = () => 
-    document.getElementById('heading').style.height = `${window.innerHeight}px`
+const height = () => {
+    const heading = document.getElementById('heading')
+    if (heading)
+        heading.style.height = `${window.innerHeight}px`
+}
 
 height()
 window.onresize = height
