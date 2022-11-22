@@ -1,0 +1,38 @@
+<blockquote><slot /></blockquote>
+
+<style lang="less">
+    blockquote {
+        position: relative;
+        text-align: center;
+        padding: 1rem;
+        font-size: 2rem;
+        border: 2rem solid transparent;
+        border-image-source: url("quote.svg");
+        border-image-slice: 9 fill;
+        border-image-width: 4rem;
+        @media screen and (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+        /*
+    &::before, &::after {
+        position: absolute;
+        font-size: 8rem;
+    }
+
+    &::before{
+        top: -4rem;
+        translate: -50% 0;
+        left: 0;
+        content: '“';
+        color: #ff4294;
+    }
+    &::after{
+        bottom: -3.5rem;
+        translate: 50% 0;
+        right: 0;
+        content: '„';
+        color: #18d1ff;
+    }
+    */
+    }
+</style>

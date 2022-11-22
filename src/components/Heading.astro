@@ -1,0 +1,106 @@
+---
+import CoolButton from "./CoolButton.astro";
+---
+
+<header id="heading">
+    <div class="logo">
+        <img src="/img/slogo.svg" alt="santi cézar" />
+        <div>Santiago <br /> Cézar</div>
+        <h2>diseño y desarrollo de software</h2>
+    </div>
+    <div class="links">
+        <a
+            href="https://github.com/santiagocezar"
+            aria-label="Perfil de GitHub"
+        >
+            <svg class="icon icon-github">
+                <use xlink:href="#icon-github"></use>
+            </svg>
+        </a>
+        <a
+            href="https://www.instagram.com/svcezar/"
+            aria-label="Página de Instagram"
+        >
+            <svg class="icon icon-instagram">
+                <use xlink:href="#icon-instagram"></use>
+            </svg>
+        </a>
+        <a
+            href="mailto:santiagocezar2013@gmail.com"
+            aria-label="Correo electrónico"
+        >
+            <svg class="icon icon-gmail">
+                <use xlink:href="#icon-gmail"></use>
+            </svg>
+        </a>
+    </div>
+    <CoolButton href="#about-me">+ info</CoolButton>
+</header>
+
+<script>
+    //@ts-check
+    const height = () => {
+        const heading = document.getElementById("heading");
+        if (heading) heading.style.height = `${window.innerHeight}px`;
+    };
+
+    height();
+    window.onresize = height;
+</script>
+
+<style lang="scss">
+    header {
+        font-size: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        @media screen and (max-width: 768px) {
+            grid-template-rows: min-content 1fr;
+            font-size: 30px;
+        }
+
+        gap: 0.5em;
+        padding: 1em;
+
+        width: 100%;
+        height: 100vh;
+
+        box-sizing: border-box;
+
+        background-attachment: fixed;
+        background-color: white;
+        background: linear-gradient(#fffa, transparent), url("img/bg.webp");
+        background-size: cover;
+        background-position: center;
+
+        background-attachment: fixed;
+
+        :global(.cool-button) {
+            grid-row-end: -1;
+            grid-column-end: -1;
+            align-self: end;
+            justify-self: end;
+        }
+    }
+    .links {
+        grid-column-start: 1;
+        grid-row-end: -1;
+        display: flex;
+        box-sizing: border-box;
+        padding: 0.25em 0.5em;
+        background-color: white;
+        align-self: end;
+        justify-self: start;
+        gap: 0.5em;
+    }
+
+    .links a {
+        text-decoration: none;
+        display: block;
+        svg {
+            width: 0.8em;
+            height: 0.8em;
+        }
+    }
+</style>
