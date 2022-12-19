@@ -18,9 +18,11 @@ const {
     "action-href": actionHref = "#",
     action,
 } = Astro.props;
+
+const compact = name.length > 14;
 ---
 
-<div class="featured-card">
+<div class:list={["featured-card", { compact }]}>
     <img src={src} alt={alt} class="preview" />
     <div class="content">
         {
@@ -63,6 +65,9 @@ const {
             mask: linear-gradient(to right, transparent, black);
             -webkit-mask: linear-gradient(to right, transparent, black);
         }
+        &.compact .content .title {
+            font-size: 1.5em;
+        }
         .content {
             grid-area: content;
             font-size: 1.5rem;
@@ -70,6 +75,9 @@ const {
             padding-right: 0;
             .title {
                 font-size: 1.8em;
+                line-height: 1.2;
+            }
+            img.title {
                 height: 1.2em;
             }
         }

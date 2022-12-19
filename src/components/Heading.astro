@@ -1,5 +1,10 @@
 ---
 import CoolButton from "./CoolButton.astro";
+
+import GitHub from "~icons/simple-icons/github";
+import Instagram from "~icons/simple-icons/instagram";
+import Gmail from "~icons/simple-icons/gmail";
+import Mastodon from "~icons/simple-icons/mastodon";
 ---
 
 <header id="heading">
@@ -13,25 +18,27 @@ import CoolButton from "./CoolButton.astro";
             href="https://github.com/santiagocezar"
             aria-label="Perfil de GitHub"
         >
-            <svg class="icon icon-github">
-                <use xlink:href="#icon-github"></use>
-            </svg>
+            <GitHub color="#171515" />
         </a>
         <a
             href="https://www.instagram.com/svcezar/"
             aria-label="Página de Instagram"
         >
-            <svg class="icon icon-instagram">
-                <use xlink:href="#icon-instagram"></use>
-            </svg>
+            <Instagram color="#e4405f" />
         </a>
+        <a
+            rel="me"
+            href="https://floss.social/@valsan"
+            a-label="Perfil de Mastodon"
+        >
+            <Mastodon color="#563acc" />
+        </a>
+
         <a
             href="mailto:santiagocezar2013@gmail.com"
             aria-label="Correo electrónico"
         >
-            <svg class="icon icon-gmail">
-                <use xlink:href="#icon-gmail"></use>
-            </svg>
+            <Gmail color="#ea4335" />
         </a>
     </div>
     <CoolButton href="#about-me">+ info</CoolButton>

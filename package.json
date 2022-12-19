@@ -15,8 +15,10 @@
     "url": "https://github.com/santiagocezar/scez.ar"
   },
   "dependencies": {
+    "@iconify/json": "^2.1.153",
     "astro": "^1.6.9",
-    "sass": "^1.56.1"
+    "sass": "^1.56.1",
+    "unplugin-icons": "^0.14.15"
   },
   "devDependencies": {
     "less": "^4.1.3"
