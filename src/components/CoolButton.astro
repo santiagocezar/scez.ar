@@ -11,15 +11,20 @@ const { href } = Astro.props;
 <style lang="less">
     a {
         color: inherit;
+        border-radius: 0.25rem 1rem;
         text-decoration: none;
         font-weight: 900;
         font-size: 30px;
         color: white;
-        background-color: #040624;
-        padding: 8px;
+        background-color: #161027;
+        padding: 0.25rem 1rem;
         transition: box-shadow 0.2s ease;
         &:hover {
-            box-shadow: -0.4em 0.2em #ff4294, 0.4em -0.2em #18d1ff;
+            box-shadow: -0.3em 0.2em #ff4294, 0.3em -0.2em #18d1ff;
+            &:active {
+                box-shadow: none;
+                background-color: #22193d;
+            }
         }
     }
 </style>

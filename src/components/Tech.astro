@@ -1,0 +1,54 @@
+<div class="grid">
+    <div class="tech3">React</div>
+    <div class="tech2">Astro</div>
+    <div class="tech3">Typescript</div>
+    <div class="tech">Qt</div>
+    <div class="tech">C++</div>
+    <div class="tech2">Rust</div>
+    <div class="tech">Vue</div>
+    <div class="tech">SQL</div>
+    <div class="tech">Docker</div>
+    <div class="tech">SQL</div>
+    <div class="tech3">Linux</div>
+    <div class="tech2">Godot</div>
+    <div class="tech3">Python</div>
+    <div class="tech2">AWS</div>
+    <div class="tech">SDL</div>
+    <div class="tech">SDL</div>
+</div>
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(6, 3rem);
+        max-width: 40rem;
+        margin: 0 auto;
+        gap: 0.5em;
+    }
+    .tech,
+    .tech2,
+    .tech3 {
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--black);
+        font-weight: bold;
+    }
+    .tech {
+        background-color: #9c72fe;
+    }
+    .tech2 {
+        font-size: 1.5em;
+        grid-row: span 2;
+        grid-column: span 2;
+        background-color: #00a6d2;
+    }
+    .tech3 {
+        font-size: 2em;
+        grid-row: span 3;
+        grid-column: span 3;
+        background-color: #f64b95;
+    }
+</style>
