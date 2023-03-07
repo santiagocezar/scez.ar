@@ -1,0 +1,91 @@
+---
+import React from "~icons/simple-icons/react";
+import Astro_ from "~icons/simple-icons/astro";
+import Typescript from "~icons/simple-icons/typescript";
+import Qt from "~icons/simple-icons/qt";
+import Cpp from "~icons/simple-icons/cplusplus";
+import Rust from "~icons/simple-icons/rust";
+import Vue from "~icons/simple-icons/vuedotjs";
+import Sql from "~icons/simple-icons/mysql";
+import Docker from "~icons/simple-icons/docker";
+import Linux from "~icons/simple-icons/linux";
+import Godot from "~icons/simple-icons/godotengine";
+import Python from "~icons/simple-icons/python";
+import Aws from "~icons/simple-icons/amazonaws";
+import Sfml from "~icons/simple-icons/sfml";
+---
+
+<div class="grid">
+    <div class="tech3"><React /> <span>React</span></div>
+    <div class="tech2"><Astro_ /> <span>Astro</span></div>
+    <div class="tech3"><Typescript /> <span>TypeScript</span></div>
+    <div class="tech"><Cpp /> <span>C++</span></div>
+    <div class="tech0"></div>
+    <div class="tech2"><Rust /> <span>Rust</span></div>
+    <div class="tech"><Vue /> <span>Vue</span></div>
+    <div class="tech"><Docker /> <span>Docker</span></div>
+    <div class="tech0"></div>
+    <div class="tech"><Sql /> <span>MySQL</span></div>
+    <div class="tech3"><Linux /> <span>Linux</span></div>
+    <div class="tech2"><Godot /> <span>Godot</span></div>
+    <div class="tech3"><Python /> <span>Python</span></div>
+    <div class="tech2"><Aws /> <span>AWS</span></div>
+    <div class="tech0"></div>
+    <div class="tech"><Sfml /> <span>SFML</span></div>
+</div>
+
+<style lang="less">
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(6, auto);
+        max-width: 50rem;
+        margin: 0 auto;
+        gap: 0.5em;
+    }
+    @media screen and (max-width: 40rem) {
+        .grid {
+            grid-auto-flow: column;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(10, auto);
+        }
+    }
+    .tech0,
+    .tech,
+    .tech2,
+    .tech3 {
+        aspect-ratio: 1 / 1;
+        align-self: stretch;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        // gap: 0.2em;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--black);
+        font-weight: bold;
+        span {
+            font-size: max(0.25em, 1rem);
+        }
+    }
+    .tech0 {
+        background-color: #6442a0ff;
+        opacity: 0.5;
+    }
+    .tech {
+        font-size: 2em;
+        background-color: #f2a6a6ff;
+    }
+    .tech2 {
+        font-size: 4em;
+        grid-row: span 2;
+        grid-column: span 2;
+        background-color: #9c72feff;
+    }
+    .tech3 {
+        font-size: 6em;
+        grid-row: span 3;
+        grid-column: span 3;
+        background-color: #f64b95ff;
+    }
+</style>

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -15,8 +15,10 @@
     "url": "https://github.com/santiagocezar/scez.ar"
   },
   "dependencies": {
+    "@iconify-json/simple-icons": "^1.1.45",
     "@iconify/json": "^2.1.153",
-    "astro": "^1.6.9",
+    "astro": "^2.0.18",
+    "csstype": "^3.1.1",
     "sass": "^1.56.1",
     "unplugin-icons": "^0.14.15"
   },

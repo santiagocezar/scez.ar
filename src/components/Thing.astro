@@ -38,7 +38,9 @@ const compact = name.length > 14;
     </div>
     {
         action && actionHref && (
-            <CoolButton href={actionHref}>{action}</CoolButton>
+            <a class="action" href={actionHref}>
+                {action}
+            </a>
         )
     }
 </div>
@@ -46,64 +48,81 @@ const compact = name.length > 14;
 <style lang="less">
     .featured-card {
         display: grid;
-        grid-template:
-            "content preview" 18rem
-            / 50% 50%;
+        grid-template-columns: 1fr 2rem 1fr 10rem 1rem;
+        grid-template-rows: 1rem 20rem 1rem;
 
         color: #040624;
-        background-color: white;
         width: 100%;
-        max-width: 900px;
-        margin-bottom: 1rem;
-
-        .preview {
-            grid-area: preview;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            mask: linear-gradient(to right, transparent, black);
-            -webkit-mask: linear-gradient(to right, transparent, black);
+        font-size: 1.75rem;
+    }
+    .preview {
+        grid-area: 1 / 1 / 3 / 3;
+        border: var(--white) solid 0.25rem;
+        width: 100%;
+        height: 100%;
+        border-radius: 1em;
+        object-fit: cover;
+        object-position: top;
+    }
+    &.compact .content .title {
+        font-size: 1.5em;
+    }
+    .content {
+        background-color: var(--white);
+        border: var(--black) solid 0.25rem;
+        border-radius: 1em;
+        grid-area: 2/2/4/5;
+        padding: 2em 1em 2em 2em;
+        .title {
+            font-size: 1.8em;
+            line-height: 1.2;
         }
-        &.compact .content .title {
-            font-size: 1.5em;
+        img.title {
+            height: 1.2em;
+        }
+    }
+
+    .action {
+        background-color: #9c72fe;
+        border: var(--black) solid 0.25rem;
+        grid-row-end: -2;
+        grid-column-end: -1;
+        align-self: end;
+        justify-self: end;
+        white-space: nowrap;
+        padding: 0.5em 1em;
+        border-radius: 1em;
+        color: var(--white);
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 1;
+
+        transition: box-shadow 0.2s ease;
+        &:hover {
+            box-shadow: -0.3em 0.2em #f64b95, 0.3em -0.2em #00a6d2;
+            &:active {
+                box-shadow: none;
+                background-color: #6442a0;
+            }
+        }
+    }
+    @media screen and (max-width: 40rem) {
+        .featured-card {
+            grid-template-columns: 1rem 1fr 1rem;
+            grid-template-rows: 1fr 2rem auto 1rem 1rem;
+
+            font-size: 1.5rem;
+        }
+        .preview {
+            grid-area: 1 / 1 / 3 / 3;
         }
         .content {
-            grid-area: content;
-            font-size: 1.5rem;
-            padding: 2em;
-            padding-right: 0;
-            .title {
-                font-size: 1.8em;
-                line-height: 1.2;
-            }
-            img.title {
-                height: 1.2em;
-            }
+            grid-area: 2/2/5/4;
+            padding: 1em 1em 3em 1em;
         }
-
-        :global(.cool-button) {
-            grid-area: preview;
-            align-self: end;
-            justify-self: end;
-            margin: 1rem;
-            z-index: 1;
-        }
-        @media screen and (max-width: 768px) {
-            margin-bottom: 4rem;
-            grid-template:
-                "content" min-content
-                "preview" 18rem
-                / auto;
-
-            .content {
-                padding: 2rem;
-                font-size: 1.2rem;
-            }
-            .preview {
-                mask: unset;
-                -webkit-mask: unset;
-            }
+        .action {
+            grid-row-end: -1;
+            grid-column-end: -2;
         }
     }
 </style>

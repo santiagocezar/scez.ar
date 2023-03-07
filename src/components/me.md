@@ -1,0 +1,1 @@
+Técnico en **Programación** egresado de la Escuela ProA Técnica. Actualmente estudiando **Ingeniería en Sistemas** en UTN. Realizo **desarrollo web**,  también hago **diseños** y contribuyo a proyectos **open-source**. Usuario de **Linux**. Busco un trabajo de **tiempo parcial** que me permita mantener un enfoque balanceado con mis estudios.

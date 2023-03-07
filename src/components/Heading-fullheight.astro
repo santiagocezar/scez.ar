@@ -8,12 +8,13 @@ import Mastodon from "~icons/simple-icons/mastodon";
 ---
 
 <header id="heading">
-    <div class="title">
-        <div class="logotype">
-            <img src="/img/slogo.svg" />
-            <h1>Santiago <br />Cézar</h1>
+    <div class="logo">
+        <img src="/img/me.jpg" />
+        <div class="name-tag">
+            <h1 class="name">Santiago <br />Cézar</h1>
+            <h2 class="tag">diseño y desarrollo de software</h2>
         </div>
-        <h2 class="tag">diseño y desarrollo de software</h2>
+        <h2 class="mobile-tag">diseño y desarrollo de software</h2>
     </div>
     <div class="links">
         <a
@@ -80,7 +81,7 @@ import Mastodon from "~icons/simple-icons/mastodon";
     }
     @keyframes social-slide {
         0% {
-            transform: translateY(400%);
+            transform: translateY(200%);
         }
         100% {
             transform: translateY(0);
@@ -89,11 +90,19 @@ import Mastodon from "~icons/simple-icons/mastodon";
 
     header {
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        font-size: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
 
-        padding: 1em;
+        @media screen and (max-width: 50rem) {
+            grid-template-rows: min-content 1fr;
+            font-size: 30px;
+            padding: 0.5em;
+        }
+
+        gap: 0.5em;
+        padding: 0.5em;
 
         margin: 1rem 1rem 2rem 1rem;
         width: calc(100% - 2rem);
@@ -101,81 +110,118 @@ import Mastodon from "~icons/simple-icons/mastodon";
         height: calc(100svh - 2rem);
 
         border-radius: 1rem;
+        box-sizing: border-box;
 
-        color: #22193d;
         background: url("/img/icecold-cari.jpg");
         background-size: cover;
         background-position-x: center;
-        animation: bg-slide 2s cubic-bezier(0, 0.55, 0.45, 1) 0s forwards;
+        animation: bg-slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s forwards;
+
+        :global(.cool-button) {
+            grid-row-end: -1;
+            grid-column-end: -1;
+            align-self: end;
+            justify-self: end;
+        }
     }
 
-    .title {
-        animation: logo-slide 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0s forwards;
-        display: grid;
-        grid-template:
-            ". . ." min-content
-            ". . ." 1rem
-            ". . ." min-content
-            / 2rem 1fr 2rem;
-        border-radius: 1rem;
+    .logo div,
+    .mobile-tag,
+    .links {
+        background: white;
+        border-radius: 2rem;
+        color: #22193d;
+        // box-shadow: 0 0 0.5rem #eaeafd;
+    }
+
+    .logo {
+        animation: logo-slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s
+            forwards;
 
         justify-self: start;
         align-self: start;
+        grid-column: span 2;
+
+        display: grid;
+        align-items: stretch;
+        justify-items: stretch;
+        grid-template-columns: 4em max-content;
+
+        gap: 0.25em;
 
         font-family: "Poppins";
         font-weight: 700;
+
+        img {
+            width: 100%;
+            border-radius: 2rem;
+        }
+        br {
+            display: none;
+        }
     }
-    .logotype {
-        background-color: var(--black);
-        color: var(--white);
-        overflow: hidden;
-        border-radius: 1rem;
+    .name-tag {
         line-height: 1;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
         gap: 0.2em;
-        h1 {
-            padding-right: 0.5em;
-            font-size: 3em;
-        }
-        img {
-            width: 10em;
-        }
-        grid-area: 1 / 1 / 3 / 3;
+        padding: 0 1em;
     }
+    .name {
+        font-size: 1em;
+    }
+    .mobile-tag,
     .tag {
-        z-index: -1;
-        border-radius: 1rem;
-        background: white;
-        font-size: 1.5em;
-        padding: 1em 1em 0.5em 1em;
-        grid-area: 2 / 2 / 4 / 4;
+        font-size: 0.5em;
+    }
+    .mobile-tag {
+        display: none;
+        text-align: center;
+        padding: 0.5em;
+        grid-column: span 2;
     }
     @media screen and (max-width: 50rem) {
-        header {
-            font-size: 0.75rem;
+        .logo {
+            grid-template-columns: 3em max-content;
+            align-self: stretch;
+            justify-self: stretch;
+            br {
+                display: unset;
+            }
+        }
+        .name-tag {
+            // width: 100%;
+        }
+        .tag {
+            display: none;
+        }
+        .mobile-tag {
+            display: unset;
         }
     }
 
     .links {
-        border-radius: 1rem;
-        animation: social-slide 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0s forwards;
-        background-color: var(--white);
+        animation: social-slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s
+            forwards;
         grid-column-end: -1;
         grid-row-end: -1;
         display: flex;
         box-sizing: border-box;
         align-self: end;
         justify-self: end;
-        a {
-            text-decoration: none;
-            display: block;
-            padding: 1em 1.5em;
+    }
 
-            svg {
-                width: 2em;
-                height: 2em;
-            }
+    .links a {
+        text-decoration: none;
+        display: block;
+        padding: 0.25em 0.4em;
+
+        svg {
+            width: 0.8em;
+            height: 0.8em;
         }
     }
 </style>

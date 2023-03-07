@@ -152,16 +152,16 @@
      inkscape:window-height="699"
      inkscape:window-width="1366"
      inkscape:guide-bbox="true"
-     showguides="true"
+     showguides="false"
      inkscape:snap-smooth-nodes="true"
      units="px"
      showgrid="true"
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="15.6875"
-     inkscape:cx="28.875"
-     inkscape:zoom="16"
+     inkscape:cy="29.168155"
+     inkscape:cx="51.972348"
+     inkscape:zoom="5.6568543"
      inkscape:pageshadow="2"
      inkscape:pageopacity="1"
      borderopacity="1.0"
@@ -188,6 +188,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -198,25 +199,26 @@
      inkscape:label="Capa 1">
     <rect
        style="opacity:0.998;fill:#161027;fill-opacity:1;stroke-width:2.365;stroke-linecap:round;paint-order:markers stroke fill;stop-color:#000000"
-       id="rect324-3"
+       id="rect1963"
        width="10.583333"
        height="10.583333"
        x="215.99425"
-       y="144.10402" />
+       y="144.10403"
+       ry="0.52914542" />
     <path
        sodipodi:nodetypes="ccccccccccccccccc"
-       d="m 218.11093,148.86654 v 0.26459 1.32287 c 0,1.169 0.94766,2.11667 2.11666,2.11667 h 1.3229 0.26458 v -0.26459 -0.52916 -0.26459 h -0.26458 -1.3229 c -0.5845,0 -1.05833,-0.47383 -1.05833,-1.05833 v -1.32287 -0.26459 h -0.26458 -0.52917 z"
-       style="fill:#f64b95;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       id="path326-6" />
+       d="m 218.11092,148.86655 v 0.26459 1.32287 c 0,1.169 0.94766,2.11667 2.11666,2.11667 h 1.3229 0.26458 v -0.26459 -0.52916 -0.26459 h -0.26458 -1.3229 c -0.5845,0 -1.05833,-0.47383 -1.05833,-1.05833 v -1.32287 -0.26459 h -0.26458 -0.52917 z"
+       style="opacity:1;fill:#ff1a8d;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path1965" />
     <path
-       id="path328-7"
-       d="m 220.75678,147.80813 v 0.26459 1.85208 a 1.0583334,1.0583334 0 0 0 1.04232,1.05833 h 0.016 v -0.26458 -1.85208 a 1.0583334,1.0583334 0 0 0 -1.04232,-1.05834 z"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
+       id="path1967"
+       d="m 220.75677,147.80814 v 0.26459 1.85208 a 1.0583334,1.0583334 0 0 0 1.04232,1.05833 h 0.016 v -0.26458 -1.85208 a 1.0583334,1.0583334 0 0 0 -1.04232,-1.05834 z"
+       style="opacity:1;fill:#eaeafd;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
     <path
        sodipodi:nodetypes="ccccccccccccccccc"
-       d="m 220.75673,146.22064 v 0.26459 0.52916 0.26459 h 0.26458 1.32294 c 0.5845,0 1.05834,0.47383 1.05834,1.05833 v 1.32295 0.26459 h 0.26458 0.52917 0.26458 v -0.26459 -1.32295 c 0,-1.16901 -0.94766,-2.11667 -2.11667,-2.11667 h -1.32294 z"
-       style="fill:#00a6d2;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       id="path330-5" />
+       d="m 220.75673,146.22067 v 0.26459 0.52916 0.26459 h 0.26458 1.32294 c 0.5845,0 1.05834,0.47383 1.05834,1.05833 v 1.32295 0.26459 h 0.26458 0.52917 0.26458 v -0.26459 -1.32295 c 0,-1.16901 -0.94766,-2.11667 -2.11667,-2.11667 h -1.32294 z"
+       style="opacity:1;fill:#0089e3;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path1969" />
   </g>
   <script
      id="mesh_polyfill"
