@@ -1,4 +1,10 @@
-<h1>
+---
+export interface Props {
+    frag?: string;
+}
+---
+
+<h1 id={Astro.props.frag}>
     <slot />
 </h1>
 

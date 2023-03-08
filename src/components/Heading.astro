@@ -15,6 +15,11 @@ import Mastodon from "~icons/simple-icons/mastodon";
         </div>
         <h2 class="tag">diseño y desarrollo de software</h2>
     </div>
+    <nav>
+        <a href="#me">Sobre mí</a>
+        <a href="#tech">Tecnologías</a>
+        <a href="#proy">Proyectos</a>
+    </nav>
     <div class="links">
         <a
             href="https://github.com/santiagocezar"
@@ -89,7 +94,9 @@ import Mastodon from "~icons/simple-icons/mastodon";
 
     header {
         overflow: hidden;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         flex-direction: column;
         justify-content: space-between;
 
@@ -151,12 +158,35 @@ import Mastodon from "~icons/simple-icons/mastodon";
         padding: 1em 1em 0.5em 1em;
         grid-area: 2 / 2 / 4 / 4;
     }
-    @media screen and (max-width: 50rem) {
-        header {
-            font-size: 0.75rem;
+    nav {
+        overflow: hidden;
+        background-color: var(--white);
+        align-self: start;
+        justify-self: end;
+        border-radius: 1rem;
+        text-align: right;
+        a {
+            display: block;
+            text-decoration: none;
+            color: #1e3788ff;
+            font-size: 1.5em;
+            font-family: "Poppins";
+            padding: 0.75rem 2rem;
+            background-repeat: space;
         }
     }
 
+    @media screen and (max-width: 50rem) {
+        header {
+            font-size: 0.75rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        nav {
+            justify-self: center;
+            text-align: center;
+        }
+    }
     .links {
         border-radius: 1rem;
         animation: social-slide 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0s forwards;
