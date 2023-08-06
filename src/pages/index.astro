@@ -11,26 +11,26 @@ import Title from "../components/Title.astro";
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Página oficial y promocional de Santiago Cézar"
-        />
-        <title>Santiago Cézar</title>
-        <!-- <link rel="stylesheet" href="index.css?v=090721" /> -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Poppins:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página oficial y promocional de Santiago Cézar"
+    />
+    <title>Santiago Cézar</title>
+    <!-- <link rel="stylesheet" href="index.css?v=090721" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        <Heading />
-        <!--
+  <body>
+    <Heading />
+    <!--
         <a href="#proyectos" aria-label="Ir al contenido">
             <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="arrow">
                 <path stroke="#000" stroke-width="4" fill="none" d="M 16 16 L 32 32 L 48 16"></path>
@@ -38,212 +38,220 @@ import Title from "../components/Title.astro";
         </a>
     -->
 
-        <main>
-            <Me />
-            <p id="warn83" hidden>
-                ⚠ Parece que estas usando Chrome 83 o inferior. Esta página se
-                ve mejor en Chrome 84 o superior o Firefox
-            </p>
-            <div>
-                <br />
-                <Title frag="tech">Tecnologías</Title>
-                <br />
-                <Tech />
-            </div>
+    <main>
+      <Me />
+      <p id="warn83" hidden>
+        ⚠ Parece que estas usando Chrome 83 o inferior. Esta página se ve mejor
+        en Chrome 84 o superior o Firefox
+      </p>
+      <div>
+        <br />
+        <Title frag="tech">Tecnologías</Title>
+        <br />
+        <Tech />
+      </div>
 
-            <div class="things">
-                <br />
-                <Title frag="proy">Proyectos</Title>
-                <br />
-                <Thing
-                    name="Score"
-                    logo-src="/img/score.svg"
-                    src="/img/score_screenshot.webp"
-                    alt="Captura de pantalla de Score"
-                    action-href="https://score.scez.ar"
-                    action="Probar"
-                >
-                    Una aplicación web para el conteo de puntos en juegos de
-                    mesa.
-                </Thing>
-                <Thing
-                    name="PEON"
-                    logo-src="/img/peon.svg"
-                    src="/img/peon_screenshot.webp"
-                    alt="Captura de pantalla de PEON"
-                    action-href="https://elbarquito.ar"
-                    action="Ejemplo"
-                >
-                    Un sistema sencillo para la creación de tiendas online.
-                </Thing>
-                <Thing
-                    name="Videojuegos"
-                    src="/img/dodge.webp"
-                    alt="Captura de pantalla de dodgestar"
-                    action-href="https://aqua24j4.itch.io/dodgestar"
-                    action="+ info"
-                >
-                    Desarrollo de juegos para PC y móvil
-                </Thing>
-                <Thing
-                    name="Diseño Gráfico"
-                    src="/img/icecold.webp"
-                    alt="El fondo de pantalla 'Ice Cold'"
-                    action-href="https://www.omgubuntu.co.uk/2019/06/kde-plasma-5-16-wallpaper"
-                    action="+ info"
-                >
-                    Diseño 2D de logos o fondos minimalistas
-                </Thing>
-                <Thing
-                    name="Hobby de modelado 3D"
-                    src="/img/3d_model.webp"
-                    alt="Modelo 3D de ejemplo"
-                >
-                    Diseño de modelos 3D para videojuegos e impresiones.
-                </Thing>
-                <Thing
-                    name="Petit Dance"
-                    src="/img/petit-dance.png"
-                    alt="Captura de pantalla de la página de Petit Dance"
-                    action-href="https://petitdance.sfco.ar"
-                    action="Visitar"
-                >
-                    Página de presentación para la academia de danza Petit
-                    Dance, escrita con Astro.
-                </Thing>
-                <Thing
-                    name="...y etc."
-                    src="/img/gh_screenshot.webp"
-                    alt="Captura de pantalla de GitHub"
-                    action-href="https://github.com/santiagocezar"
-                    action="Ir a GitHub"
-                >
-                    En mi GitHub podes encontrar otros proyectos open-source que
-                    hice o en los que colaboré.
-                </Thing>
-            </div>
-        </main>
-    </body>
+      <div class="things">
+        <br />
+        <Title frag="proy">Proyectos</Title>
+        <br />
+        <Thing
+          name="Truco"
+          src="/img/truco.webp"
+          alt="Captura de pantalla de un contador de puntos para el truco"
+          action-href="https://score.scez.ar"
+          action="Probar"
+        >
+          Un contador de puntos configurable para el truco argentino.
+        </Thing>
+        <Thing
+          name="Score"
+          logo-src="/img/score.svg"
+          src="/img/score_screenshot.webp"
+          alt="Captura de pantalla de Score"
+          action-href="https://score.scez.ar"
+          action="Probar"
+        >
+          Una aplicación web para el conteo de puntos en juegos de mesa.
+        </Thing>
+        <Thing
+          name="PEON"
+          logo-src="/img/peon.svg"
+          src="/img/peon_screenshot.webp"
+          alt="Captura de pantalla de PEON"
+          action-href="https://elbarquito.ar"
+          action="Ejemplo"
+        >
+          Un sistema sencillo para la creación de tiendas online.
+        </Thing>
+        <Thing
+          name="Videojuegos"
+          src="/img/dodge.webp"
+          alt="Captura de pantalla de dodgestar"
+          action-href="https://aqua24j4.itch.io/dodgestar"
+          action="+ info"
+        >
+          Desarrollo de juegos para PC y móvil
+        </Thing>
+        <Thing
+          name="Diseño Gráfico"
+          src="/img/icecold.webp"
+          alt="El fondo de pantalla 'Ice Cold'"
+          action-href="https://www.omgubuntu.co.uk/2019/06/kde-plasma-5-16-wallpaper"
+          action="+ info"
+        >
+          Diseño 2D de logos o fondos minimalistas
+        </Thing>
+        <Thing
+          name="Hobby de modelado 3D"
+          src="/img/3d_model.webp"
+          alt="Modelo 3D de ejemplo"
+        >
+          Diseño de modelos 3D para videojuegos e impresiones.
+        </Thing>
+        <Thing
+          name="Petit Dance"
+          src="/img/petit-dance.png"
+          alt="Captura de pantalla de la página de Petit Dance"
+          action-href="https://petitdance.sfco.ar"
+          action="Visitar"
+        >
+          Página de presentación para la academia de danza Petit Dance, escrita
+          con Astro.
+        </Thing>
+        <Thing
+          name="...y etc."
+          src="/img/gh_screenshot.webp"
+          alt="Captura de pantalla de GitHub"
+          action-href="https://github.com/santiagocezar"
+          action="Ir a GitHub"
+        >
+          En mi GitHub podes encontrar otros proyectos open-source que hice o en
+          los que colaboré.
+        </Thing>
+      </div>
+    </main>
+  </body>
 </html>
 
 <style lang="less" is:global>
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-    :root {
-        scroll-padding-top: 2 rem;
-        font-size: 16px;
-        scrollbar-color: #aaa #fff;
-        scroll-behavior: smooth;
-        font-family: "Barlow", sans-serif;
+  :root {
+    scroll-padding-top: 2 rem;
+    font-size: 16px;
+    scrollbar-color: #aaa #fff;
+    scroll-behavior: smooth;
+    font-family: "Barlow", sans-serif;
 
-        --black: #161027;
-        --white: #fff;
+    --black: #161027;
+    --white: #fff;
 
-        --text: var(--white);
-        --bg: var(--black);
+    --text: var(--white);
+    --bg: var(--black);
 
-        --pink-bg: #440831;
-        --pink: #ff4294ff;
-        --pink-bold: #ff60b2ff;
-        --cyan-bg: #002b49;
-        --cyan: #0089e3ff;
-        --cyan-bold: #16a3e9ff;
+    --pink-bg: #440831;
+    --pink: #ff4294ff;
+    --pink-bold: #ff60b2ff;
+    --cyan-bg: #002b49;
+    --cyan: #0089e3ff;
+    --cyan-bold: #16a3e9ff;
 
-        background-color: var(--bg);
-        color: var(--text);
-    }
+    background-color: var(--bg);
+    color: var(--text);
+  }
 
-    .pink {
-        --color-bg: var(--pink-bg);
-        --color: var(--pink);
-        --color-bold: var(--pink-bold);
-    }
+  .pink {
+    --color-bg: var(--pink-bg);
+    --color: var(--pink);
+    --color-bold: var(--pink-bold);
+  }
 
-    .cyan {
-        --color-bg: var(--cyan-bg);
-        --color: var(--cyan);
-        --color-bold: var(--cyan-bold);
-    }
+  .cyan {
+    --color-bg: var(--cyan-bg);
+    --color: var(--cyan);
+    --color-bold: var(--cyan-bold);
+  }
 </style>
 <style lang="less">
-    .h {
-        display: flex;
-        gap: 1rem;
+  .h {
+    display: flex;
+    gap: 1rem;
+  }
+  #about-me {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 4em 2rem;
+    blockquote {
+      max-width: 16em;
     }
-    #about-me {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        padding: 4em 2rem;
-        blockquote {
-            max-width: 16em;
-        }
-    }
-    .arrow {
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        left: calc(50% - 32px);
-        bottom: -6px;
-        width: 64px;
-        height: 64px;
-    }
+  }
+  .arrow {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    left: calc(50% - 32px);
+    bottom: -6px;
+    width: 64px;
+    height: 64px;
+  }
 
-    main {
-        padding: 0 1em 2em 1em;
-        box-sizing: border-box;
-        border-top: 8px solid transparent;
-        width: 100%;
-        max-width: 80rem;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
+  main {
+    padding: 0 1em 2em 1em;
+    box-sizing: border-box;
+    border-top: 8px solid transparent;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
-        // align-items: center;
+    // align-items: center;
+  }
+
+  .things {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 70rem;
+    gap: 2em;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
     }
+  }
 
-    .things {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0 auto;
-        max-width: 70rem;
-        gap: 2em;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-
-        @media screen and (max-width: 768px) {
-            grid-template-columns: 1fr;
-        }
+  .aspect1-1 {
+    position: relative;
+    flex-shrink: 0;
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
     }
-
-    .aspect1-1 {
-        position: relative;
-        flex-shrink: 0;
-        &::after {
-            content: "";
-            display: block;
-            padding-bottom: 100%;
-        }
-        img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-        }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
     }
+  }
 
-    .icon {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        stroke-width: 0;
-        stroke: none;
-        fill: white;
-    }
+  .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    stroke-width: 0;
+    stroke: none;
+    fill: white;
+  }
 </style>
