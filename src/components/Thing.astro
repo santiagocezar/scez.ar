@@ -1,41 +1,41 @@
 ---
+import { Image, type ImageMetadata } from 'astro:assets';
 import CoolButton from "./CoolButton.astro";
 
 export interface Props {
     name: string;
-    src: string;
+    capture: ImageMetadata;
+    logo: ImageMetadata;
     alt: string;
-    "logo-src"?: string;
-    "action-href"?: string;
     action?: string;
+    "action-href"?: string;
 }
 
 const {
     name,
-    src,
+    capture,
+    logo,
     alt,
-    "logo-src": logoSrc,
     "action-href": actionHref = "#",
     action,
 } = Astro.props;
 
+const device = capture.width > capture.height ? 'desktop' : 'mobile'
 const compact = name.length > 14;
 ---
 
-<div class:list={["featured-card", { compact }]}>
-    <img src={src} alt={alt} class="preview" />
-    <div class="content">
-        {
-            logoSrc ? (
-                <img src={logoSrc} alt={name} class="title" />
-            ) : (
-                <h1 class="title">{name}</h1>
-            )
-        }
-        <p>
-            <slot />
-        </p>
-    </div>
+<div class:list={["featured-card", { compact }, device]}>
+    {
+        logo ? (
+            <Image src={logo} alt={name} class="title" />
+        ) : (
+            <h1 class="title">{name}</h1>
+        )
+    }
+    <p class="content">
+        <slot />
+    </p>
+    <Image src={capture} alt={alt} class="preview" />
     {
         action && actionHref && (
             <a class="action" href={actionHref}>
@@ -48,45 +48,62 @@ const compact = name.length > 14;
 <style lang="less">
     .featured-card {
         display: grid;
-        grid-template-columns: 1fr 2rem 1fr 10rem 1rem;
-        grid-template-rows: 1rem 20rem 1rem;
+        grid-template-rows:
+            [logo-start desc-start] 3rem
+            [img-start act-start] 4rem
+            [logo-end desc-end] 1rem
+            [img-end act-end];
+        grid-template-columns:
+            [logo-start] 1rem
+            [img-start] 1fr
+            [logo-end] 1fr
+            [desc-start] 2rem
+            [img-end] 3fr
+            [act-start] 1fr
+            [desc-end] 1rem
+            [act-end];
 
+        gap: 1.2rem;
         color: #040624;
         width: 100%;
         font-size: 1.75rem;
     }
     .preview {
-        grid-area: 1 / 1 / 3 / 3;
+        grid-area: img-start / img-start / img-end / img-end;
         border: var(--white) solid 0.25rem;
-        width: 100%;
-        height: 100%;
+        height: auto;
         border-radius: 1em;
         object-fit: cover;
         object-position: top;
+        aspect-ratio: 1 / 1;
     }
     &.compact .content .title {
         font-size: 1.5em;
     }
     .content {
+        grid-area: desc;
         background-color: var(--white);
         border: var(--black) solid 0.25rem;
         border-radius: 1em;
-        grid-area: 2/2/4/5;
         padding: 2em 1em 2em 2em;
-        .title {
-            font-size: 1.8em;
-            line-height: 1.2;
-        }
-        img.title {
-            height: 1.2em;
-        }
+
+    }
+
+    .title {
+        grid-area: logo;
+        font-size: 1.8em;
+/*         line-height: 1.2; */
+    }
+
+    img.title {
+        height: 100%;
+        width: auto;
     }
 
     .action {
+        grid-area: action;
         background-color: #9c72fe;
         border: var(--black) solid 0.25rem;
-        grid-row-end: -2;
-        grid-column-end: -1;
         align-self: end;
         justify-self: end;
         white-space: nowrap;

@@ -1,10 +1,11 @@
 ---
+import Svelte from "~icons/simple-icons/svelte";
 import React from "~icons/simple-icons/react";
-import Astro_ from "~icons/simple-icons/astro";
+import AstroIcon from "~icons/simple-icons/astro";
 import Typescript from "~icons/simple-icons/typescript";
+import NixOS from "~icons/simple-icons/nixos";
 import Cpp from "~icons/simple-icons/cplusplus";
 import Rust from "~icons/simple-icons/rust";
-import Vue from "~icons/simple-icons/vuedotjs";
 import Sql from "~icons/simple-icons/mysql";
 import Docker from "~icons/simple-icons/docker";
 import Linux from "~icons/simple-icons/linux";
@@ -15,22 +16,22 @@ import Sfml from "~icons/simple-icons/sfml";
 ---
 
 <div class="grid">
-    <div class="tech3"><React /> <span>React</span></div>
-    <div class="tech2"><Astro_ /> <span>Astro</span></div>
-    <div class="tech3"><Typescript /> <span>TypeScript</span></div>
-    <div class="tech"><Cpp /> <span>C++</span></div>
+    <div class="tech3"><Svelte /> <span>Svelte</span></div>
+    <div class="tech2"><AstroIcon /> <span>Astro</span></div>
+    <div class="tech3"><NixOS /> <span>NixOS</span></div>
+    <div class="tech1"><Cpp /> <span>C++</span></div>
     <div class="tech0"></div>
     <div class="tech2"><Rust /> <span>Rust</span></div>
-    <div class="tech"><Vue /> <span>Vue</span></div>
-    <div class="tech"><Docker /> <span>Docker</span></div>
-    <div class="tech0"></div>
-    <div class="tech"><Sql /> <span>MySQL</span></div>
+    <div class="tech1"><React /> <span>React</span></div>
+    <div class="tech1"><Typescript /> <span>TypeScript</span></div>
+    <div class="tech1"><Docker /> <span>Docker</span></div>
+    <div class="tech1"><Sql /> <span>MySQL</span></div>
     <div class="tech3"><Linux /> <span>Linux</span></div>
-    <div class="tech2"><Godot /> <span>Godot</span></div>
-    <div class="tech3"><Python /> <span>Python</span></div>
+    <div class="tech2"><Python /> <span>Python</span></div>
+    <div class="tech3"><Godot /> <span>Godot</span></div>
     <div class="tech2"><Aws /> <span>AWS</span></div>
     <div class="tech0"></div>
-    <div class="tech"><Sfml /> <span>SFML</span></div>
+    <div class="tech1"><Sfml /> <span>SFML</span></div>
 </div>
 
 <style lang="less">
@@ -41,9 +42,10 @@ import Sfml from "~icons/simple-icons/sfml";
         max-width: 50rem;
         margin: 0 auto;
         gap: 0.5em;
+        font-size: 0.75rem;
     }
     .tech0,
-    .tech,
+    .tech1,
     .tech2,
     .tech3 {
         aspect-ratio: 1 / 1;
@@ -51,44 +53,45 @@ import Sfml from "~icons/simple-icons/sfml";
         border-radius: 1rem;
         display: flex;
         align-items: center;
-        // gap: 0.2em;
         justify-content: center;
         flex-direction: column;
-        color: var(--black);
+        color: var(--blue4);
         font-weight: bold;
         span {
-            font-size: max(0.25em, 1rem);
+            font-size: max(0.25em, .75rem);
         }
     }
     .tech0 {
-        background-color: #6442a0ff;
+        background-color: var(--blue1);
         opacity: 0.5;
     }
-    .tech {
+    .tech1 {
         font-size: 2em;
-        background-color: #f2a6a6ff;
+        background-color: var(--blue2);
     }
     .tech2 {
         font-size: 4em;
         grid-row: span 2;
         grid-column: span 2;
-        background-color: #9c72feff;
+        background-color: var(--blue3);
+        color: var(--blue1);
     }
     .tech3 {
         font-size: 6em;
         grid-row: span 3;
         grid-column: span 3;
-        background-color: #f64b95ff;
+        background-color: var(--blue4);
+        color: var(--blue2);
     }
     @media screen and (max-width: 40rem) {
         .grid {
+            font-size: 0.85em;
             grid-auto-flow: column;
             grid-template-columns: repeat(6, 1fr);
             grid-template-rows: repeat(10, auto);
-            font-size: 0.85em;
         }
         .tech0,
-        .tech,
+        .tech1,
         .tech2,
         .tech3 {
             span {

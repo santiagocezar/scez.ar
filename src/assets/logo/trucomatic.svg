@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100.09659"
+   height="22"
+   viewBox="0 0 100.09659 22"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="trucomatic.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     showguides="false"
+     inkscape:zoom="3.9012882"
+     inkscape:cx="60.364676"
+     inkscape:cy="44.856978"
+     inkscape:window-width="1366"
+     inkscape:window-height="700"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid132"
+       originx="-70"
+       originy="-79"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
+    <sodipodi:guide
+       position="15,1004"
+       orientation="0,-1"
+       id="guide1617"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="21,1005.5"
+       orientation="1,0"
+       id="guide1619"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="24,1030.6898"
+       orientation="1,0"
+       id="guide1648"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="5,1009"
+       orientation="0,-1"
+       id="guide1650"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-11.5,1011"
+       orientation="0,-1"
+       id="guide1658"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="95.90493,947.05138"
+       orientation="0,-1"
+       id="guide2591"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="103.34869,952.64963"
+       orientation="0,-1"
+       id="guide2593"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="98.13022,952.64963"
+       orientation="1,0"
+       id="guide2597"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="100.84972,952.64963"
+       orientation="1,0"
+       id="guide2599"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="125.03731,963.163"
+       orientation="1,0"
+       id="guide2772"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="129.43507,968.6265"
+       orientation="0,-1"
+       id="guide2774"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="126.81356,961.80325"
+       orientation="0,-1"
+       id="guide3080"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="125.95606,960.027"
+       orientation="0,-1"
+       id="guide3084"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="126.81356,963.163"
+       orientation="1,0"
+       id="guide3086"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="126.81356,962.69138"
+       orientation="0,-1"
+       id="guide3088"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="124.59243,962.69138"
+       orientation="1,0"
+       id="guide3339"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="127.25649,962.69138"
+       orientation="1,0"
+       id="guide3341"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="126.81356,963.57951"
+       orientation="0,-1"
+       id="guide3347"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="137.76523,979.04747"
+       orientation="1,0"
+       id="guide3437"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="139.54148,979.04747"
+       orientation="1,0"
+       id="guide3439"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="138.65237,978.15935"
+       orientation="0,-1"
+       id="guide3443"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4939">
+      <stop
+         style="stop-color:#630081;stop-opacity:1;"
+         offset="0"
+         id="stop4935" />
+      <stop
+         style="stop-color:#31108b;stop-opacity:1;"
+         offset="0.3081761"
+         id="stop5083" />
+      <stop
+         style="stop-color:#06634f;stop-opacity:1;"
+         offset="0.75"
+         id="stop5292" />
+      <stop
+         style="stop-color:#31108b;stop-opacity:1;"
+         offset="1"
+         id="stop4937" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4939"
+       id="linearGradient4941"
+       x1="94.685997"
+       y1="94.975502"
+       x2="140.99101"
+       y2="94.975502"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-70,-79)">
+    <g
+       id="g1576">
+      <g
+         id="g1012">
+        <rect
+           style="fill:#31108b;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect898"
+           width="10"
+           height="3"
+           x="75"
+           y="96"
+           ry="0" />
+        <rect
+           style="fill:#2c37de;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect236"
+           width="7"
+           height="5"
+           x="70"
+           y="95"
+           ry="2" />
+      </g>
+      <g
+         id="g1018"
+         transform="rotate(90,81,90)">
+        <rect
+           style="fill:#630081;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1014"
+           width="10"
+           height="3"
+           x="75"
+           y="96"
+           ry="0" />
+        <rect
+           style="fill:#fe1e6e;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1016"
+           width="7"
+           height="5"
+           x="70"
+           y="95"
+           ry="2" />
+      </g>
+      <g
+         id="g1024"
+         transform="rotate(180,81,90)">
+        <rect
+           style="fill:#ac4204;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1020"
+           width="10"
+           height="3"
+           x="75"
+           y="96"
+           ry="0" />
+        <rect
+           style="fill:#ffc51a;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1022"
+           width="7"
+           height="5"
+           x="70"
+           y="95"
+           ry="2" />
+      </g>
+      <g
+         id="g1030"
+         transform="rotate(-90,81,90)">
+        <rect
+           style="fill:#06634f;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1026"
+           width="10"
+           height="3"
+           x="75"
+           y="96"
+           ry="0" />
+        <rect
+           style="fill:#28db67;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1028"
+           width="7"
+           height="5"
+           x="70"
+           y="95"
+           ry="2" />
+      </g>
+      <g
+         id="g1625"
+         transform="rotate(-90,81,90)">
+        <rect
+           style="fill:#06634f;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1621"
+           width="10"
+           height="3"
+           x="75"
+           y="96"
+           ry="0" />
+        <rect
+           style="fill:#28db67;fill-opacity:1;stroke-width:5;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1623"
+           width="7"
+           height="5"
+           x="70"
+           y="95"
+           ry="2" />
+      </g>
+    </g>
+    <path
+       style="font-weight:800;font-size:12.25px;line-height:1.2;font-family:Poppins;-inkscape-font-specification:'Poppins Ultra-Bold';stroke-width:0.1;stroke-linecap:round;paint-order:stroke fill markers"
+       d="M 103.11358,92.95425 V 95 h -1.04125 q -2.633747,0 -2.633747,-2.60925 V 90.1245 h -0.84525 v -1.99675 h 0.84525 v -1.666 h 2.413247 v 1.666 h 1.2495 v 1.99675 h -1.2495 v 2.303 q 0,0.28175 0.1225,0.40425 0.13475,0.1225 0.441,0.1225 z m 3.5035,-3.61375 q 0.40425,-0.588 0.98,-0.931 0.57575,-0.343 1.23725,-0.343 v 2.56025 h -0.67375 q -0.784,0 -1.16375,0.30625 -0.37975,0.30625 -0.37975,1.06575 V 95 h -2.401 v -6.87225 h 2.401 z m 10.10625,-1.21275 V 95 h -2.41325 v -0.98 q -0.30625,0.4655 -0.84525,0.7595 -0.539,0.28175 -1.23725,0.28175 -1.2005,0 -1.89875,-0.784 -0.686,-0.79625 -0.686,-2.156 v -3.9935 h 2.38875 V 91.815 q 0,0.588 0.30625,0.931 0.3185,0.33075 0.833,0.33075 0.52675,0 0.833,-0.33075 0.30625,-0.343 0.30625,-0.931 v -3.68725 z m 0.98001,3.43 q 0,-1.06575 0.441,-1.862 0.441,-0.79625 1.225,-1.225 0.79625,-0.42875 1.813,-0.42875 1.31075,0 2.205,0.72275 0.89425,0.7105 1.1515,1.99675 h -2.548 q -0.2205,-0.67375 -0.8575,-0.67375 -0.45325,0 -0.72275,0.37975 -0.25725,0.3675 -0.25725,1.09025 0,0.72275 0.25725,1.1025 0.2695,0.37975 0.72275,0.37975 0.64925,0 0.8575,-0.67375 h 2.548 q -0.25725,1.274 -1.1515,1.99675 -0.89425,0.72275 -2.205,0.72275 -1.01675,0 -1.813,-0.42875 -0.784,-0.42875 -1.225,-1.225 -0.441,-0.79625 -0.441,-1.87425 z m 11.02501,3.528 q -1.029,0 -1.84975,-0.42875 -0.8085,-0.42875 -1.274,-1.225 -0.4655,-0.79625 -0.4655,-1.87425 0,-1.06575 0.4655,-1.862 0.47775,-0.79625 1.28625,-1.225 0.82075,-0.42875 1.84975,-0.42875 1.029,0 1.8375,0.42875 0.82075,0.42875 1.28625,1.225 0.47775,0.79625 0.47775,1.862 0,1.06575 -0.47775,1.87425 -0.4655,0.79625 -1.28625,1.225 -0.82075,0.42875 -1.84975,0.42875 z m 0,-2.0825 q 0.50225,0 0.833,-0.3675 0.343,-0.37975 0.343,-1.078 0,-0.69825 -0.343,-1.06575 -0.33075,-0.3675 -0.82075,-0.3675 -0.49,0 -0.82075,0.3675 -0.33075,0.3675 -0.33075,1.06575 0,0.7105 0.3185,1.078 0.3185,0.3675 0.82075,0.3675 z m 13.57299,-4.93675 q 1.2985,0 2.0335,0.784 0.74725,0.784 0.74725,2.14375 V 95 h -2.401 v -3.68725 q 0,-0.55125 -0.30625,-0.8575 -0.30625,-0.30625 -0.833,-0.30625 -0.52675,0 -0.833,0.30625 -0.30625,0.30625 -0.30625,0.8575 V 95 h -2.401 v -3.68725 q 0,-0.55125 -0.30625,-0.8575 -0.294,-0.30625 -0.82075,-0.30625 -0.539,0 -0.84525,0.30625 -0.30625,0.30625 -0.30625,0.8575 V 95 h -2.401 v -6.87225 h 2.401 v 0.9065 q 0.3185,-0.441 0.82075,-0.69825 0.5145,-0.2695 1.176,-0.2695 0.7595,0 1.3475,0.33075 0.60025,0.33075 0.94325,0.931 0.3675,-0.5635 0.96775,-0.9065 0.60025,-0.35525 1.323,-0.35525 z m 3.6995,3.49125 q 0,-1.06575 0.37975,-1.862 0.392,-0.79625 1.0535,-1.225 0.67375,-0.42875 1.4945,-0.42875 0.7105,0 1.225,0.28175 0.5145,0.28175 0.79625,0.7595 v -0.9555 h 2.401 V 95 h -2.401 v -0.9555 q -0.28175,0.47775 -0.8085,0.7595 -0.5145,0.28175 -1.21275,0.28175 -0.82075,0 -1.4945,-0.42875 -0.6615,-0.42875 -1.0535,-1.225 -0.37975,-0.8085 -0.37975,-1.87425 z m 4.949,0 q 0,-0.6615 -0.3675,-1.04125 -0.35525,-0.37975 -0.882,-0.37975 -0.539,0 -0.89425,0.37975 -0.35525,0.3675 -0.35525,1.04125 0,0.6615 0.35525,1.0535 0.35525,0.37975 0.89425,0.37975 0.52675,0 0.882,-0.37975 0.3675,-0.37975 0.3675,-1.0535 z m 7.82775,1.3965 V 95 h -1.04125 q -2.63375,0 -2.63375,-2.60925 V 90.1245 h -0.84525 v -1.99675 h 0.84525 v -1.666 h 2.41325 v 1.666 h 1.2495 v 1.99675 h -1.2495 v 2.303 q 0,0.28175 0.1225,0.40425 0.13475,0.1225 0.441,0.1225 z m 2.31524,-5.4635 q -0.637,0 -1.029,-0.343 -0.37975,-0.35525 -0.37975,-0.882 0,-0.539 0.37975,-0.89425 0.392,-0.35525 1.029,-0.35525 0.62475,0 1.0045,0.35525 0.392,0.35525 0.392,0.89425 0,0.52675 -0.392,0.882 -0.37975,0.343 -1.0045,0.343 z m 1.18825,0.637 V 95 h -2.401 v -6.87225 z m 0.98001,3.43 q 0,-1.06575 0.441,-1.862 0.441,-0.79625 1.225,-1.225 0.79625,-0.42875 1.813,-0.42875 1.31075,0 2.205,0.72275 0.89425,0.7105 1.1515,1.99675 h -2.548 q -0.2205,-0.67375 -0.8575,-0.67375 -0.45325,0 -0.72275,0.37975 -0.25725,0.3675 -0.25725,1.09025 0,0.72275 0.25725,1.1025 0.2695,0.37975 0.72275,0.37975 0.64925,0 0.8575,-0.67375 h 2.548 q -0.25725,1.274 -1.1515,1.99675 -0.89425,0.72275 -2.205,0.72275 -1.01675,0 -1.813,-0.42875 -0.784,-0.42875 -1.225,-1.225 -0.441,-0.79625 -0.441,-1.87425 z"
+       id="text4910"
+       aria-label="trucomatic" />
+  </g>
+</svg>

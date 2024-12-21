@@ -1,11 +1,26 @@
 ---
-import { Content as Prompt } from "./me.md";
+import * as doc from "./me.md";
+
+const content = await doc.compiledContent()
+
+console.log(content)
+
+const birthday = new Date(2004, 5, 24);
+const now = new Date();
+
+let age = now.getYear() - birthday.getYear();
+if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate()) {
+    age--
+} else if (now.getMonth() < birthday.getMonth()) {
+    age--
+}
+
+
 ---
 
-<div class="root" id="me">
+<div class="root">
     <div class="img"></div>
-    <div class="text">
-        <Prompt />
+    <div class="text" set:html={content.replace('@age@', age)}>
     </div>
 </div>
 
@@ -14,7 +29,7 @@ import { Content as Prompt } from "./me.md";
         display: grid;
         margin: 0 auto;
         max-width: 60rem;
-        font-size: 1.75rem;
+        font-size: 1.25rem;
         grid-template:
             ". i1 ." 1fr
             "t t i2" 4fr
@@ -23,17 +38,21 @@ import { Content as Prompt } from "./me.md";
     }
     .text {
         grid-area: t;
-        border: var(--black) solid 0.25rem;
-        background-color: #87d9c7;
+        border: var(--blue3) solid 1px;
+        box-shadow: .25rem .25rem var(--blue3);
+        background-color: var(--blue1);
         color: var(--black);
         padding: 1em;
+        line-height: 1.4;
         border-radius: 1em;
         height: fit-content;
         min-height: fit-content;
+        text-wrap: balance;
     }
     .img {
         grid-area: i1-start / i1-start / i2-end / i2-end;
-        border: var(--white) solid 0.25rem;
+        border: black solid 1px;
+        box-shadow: .25rem .25rem black;
         background-image: url("/img/bg.webp");
         background-position: center;
         background-size: cover;
@@ -45,7 +64,6 @@ import { Content as Prompt } from "./me.md";
         .root {
             grid-template-rows: 0.5fr 2fr 1fr;
             grid-template-columns: 1fr 6fr 1fr;
-            font-size: 1.5rem;
         }
     }
 </style>
