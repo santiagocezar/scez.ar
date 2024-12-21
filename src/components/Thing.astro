@@ -25,13 +25,6 @@ const compact = name.length > 14;
 ---
 
 <div class:list={["featured-card", { compact }, device]}>
-    {
-        logo ? (
-            <Image src={logo} alt={name} class="title" />
-        ) : (
-            <h1 class="title">{name}</h1>
-        )
-    }
     <p class="content">
         <slot />
     </p>
@@ -43,73 +36,88 @@ const compact = name.length > 14;
             </a>
         )
     }
+    {
+        logo ? (
+            <Image src={logo} alt={name} class="title" />
+        ) : (
+            <h1 class="title">{name}</h1>
+        )
+    }
 </div>
 
 <style lang="less">
     .featured-card {
         display: grid;
-        grid-template-rows:
-            [logo-start desc-start] 3rem
-            [img-start act-start] 4rem
-            [logo-end desc-end] 1rem
-            [img-end act-end];
-        grid-template-columns:
-            [logo-start] 1rem
-            [img-start] 1fr
-            [logo-end] 1fr
-            [desc-start] 2rem
-            [img-end] 3fr
-            [act-start] 1fr
-            [desc-end] 1rem
-            [act-end];
+        grid-template:
+            "logo .       .    desc .   .       .  " 2rem
+            ".    logoimg .    .    .   .       .  " 1rem
+            ".    .       .    .    .   .       .  " 10rem
+            ".    .       .    .    .   descact .  " 4rem
+            ".    .       .    img  .   .       act" 2rem
+           / 1rem 2fr     auto 1rem 3fr 1fr     1rem;
 
         gap: 1.2rem;
         color: #040624;
         width: 100%;
         font-size: 1.75rem;
     }
+    .title {
+        grid-area: logo / logo / logoimg / logoimg;
+        font-size: 1.8em;
+        background-color: white;
+        border: black solid 1px;
+        box-shadow: .25rem .25rem black;
+        border-radius: 1rem;
+        padding: 1rem;
+/*         line-height: 1.2; */
+    }
     .preview {
-        grid-area: img-start / img-start / img-end / img-end;
-        border: var(--white) solid 0.25rem;
-        height: auto;
-        border-radius: 1em;
+        grid-area: logoimg  / logoimg / img / img;
+    }
+    .content {
+        grid-area: desc / desc / descact / descact;
+    }
+    .action {
+        grid-area: descact / descact / act / act;
+    }
+    .preview {
+        border: black solid 1px;
+        box-shadow: .25rem .25rem black;
+        border-radius: 1rem;
         object-fit: cover;
         object-position: top;
+        height: 100%;
+        width: auto;
         aspect-ratio: 1 / 1;
     }
     &.compact .content .title {
         font-size: 1.5em;
     }
     .content {
-        grid-area: desc;
-        background-color: var(--white);
-        border: var(--black) solid 0.25rem;
-        border-radius: 1em;
+        border: var(--blue3) solid 1px;
+        box-shadow: .25rem .25rem var(--blue3);
+        background-color: var(--blue1);
+        border-radius: 1rem;
         padding: 2em 1em 2em 2em;
-
-    }
-
-    .title {
-        grid-area: logo;
-        font-size: 1.8em;
-/*         line-height: 1.2; */
+        color: var(--blue4);
     }
 
     img.title {
         height: 100%;
         width: auto;
+        object-fit: contain;
     }
 
     .action {
-        grid-area: action;
-        background-color: #9c72fe;
-        border: var(--black) solid 0.25rem;
+        border: var(--pink3) solid 1px;
+        box-shadow: .25rem .25rem var(--pink3);
+        background-color: var(--pink1);
+        border-radius: 1rem;
         align-self: end;
         justify-self: end;
         white-space: nowrap;
         padding: 0.5em 1em;
-        border-radius: 1em;
-        color: var(--white);
+        color: var(--pink4);
         font-weight: bold;
         text-decoration: none;
         z-index: 1;
@@ -123,6 +131,7 @@ const compact = name.length > 14;
             }
         }
     }
+    /*
     @media screen and (max-width: 40rem) {
         .featured-card {
             grid-template-columns: 1rem 1fr 1rem;
@@ -141,5 +150,5 @@ const compact = name.length > 14;
             grid-row-end: -1;
             grid-column-end: -2;
         }
-    }
+    }*/
 </style>
