@@ -1,0 +1,14 @@
+---
+import * as assets from '../assets'
+---
+
+<div class="card">
+    <div class="content">
+        <slot />
+    </div>
+    <Image class="preview" src={capture} alt={alt}  />
+    <a class="action" href={actionHref}>
+        {action}
+    </a>
+    <Image src={logo} alt={name} class="title" />
+</div>

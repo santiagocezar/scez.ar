@@ -25,9 +25,9 @@ const compact = name.length > 14;
 ---
 
 <div class:list={["featured-card", { compact }, device]}>
-    <p class="content">
+    <div class="content">
         <slot />
-    </p>
+    </div>
     <Image src={capture} alt={alt} class="preview" />
     {
         action && actionHref && (
@@ -50,16 +50,15 @@ const compact = name.length > 14;
         display: grid;
         grid-template:
             "logo .       .    desc .   .       .  " 2rem
-            ".    logoimg .    .    .   .       .  " 1rem
-            ".    .       .    .    .   .       .  " 10rem
-            ".    .       .    .    .   descact .  " 4rem
-            ".    .       .    img  .   .       act" 2rem
-           / 1rem 2fr     auto 1rem 3fr 1fr     1rem;
+            ".    logoimg .    .    .   .       .  " 2rem
+            ".    .       .    .    .   .       .  " auto
+            ".    .       .    .    .   descact .  " auto
+            ".    .       .    img  .   .       act" 1rem
+           / 1rem 1.5fr   auto 1rem 3fr 1fr     1rem;
 
-        gap: 1.2rem;
         color: #040624;
         width: 100%;
-        font-size: 1.75rem;
+        font-size: 1rem;
     }
     .title {
         grid-area: logo / logo / logoimg / logoimg;
@@ -98,8 +97,14 @@ const compact = name.length > 14;
         box-shadow: .25rem .25rem var(--blue3);
         background-color: var(--blue1);
         border-radius: 1rem;
-        padding: 2em 1em 2em 2em;
+        padding: 1.5rem 2rem;
         color: var(--blue4);
+        font-size: 1.5rem;
+        line-height: 1.1;
+
+        & :global(p) {
+            margin-bottom: 1rem;
+        }
     }
 
     img.title {
