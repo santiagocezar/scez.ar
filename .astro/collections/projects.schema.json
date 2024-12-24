@@ -1,0 +1,39 @@
+{
+  "$ref": "#/definitions/projects",
+  "definitions": {
+    "projects": {
+      "type": "object",
+      "properties": {
+        "thumbsrc": {
+          "type": "string"
+        },
+        "thumbalt": {
+          "type": "string"
+        },
+        "logosrc": {
+          "type": "string"
+        },
+        "logoalt": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        },
+        "hreflabel": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "thumbsrc",
+        "thumbalt",
+        "logosrc",
+        "logoalt"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

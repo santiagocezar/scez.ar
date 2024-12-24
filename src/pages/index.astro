@@ -10,6 +10,7 @@ import Tech from "../components/Tech.astro";
 import Thing from "../components/Thing.astro";
 
 import * as assets from '../assets'
+import Projects from "../components/Projects.astro";
 ---
 
 <!DOCTYPE html>
@@ -48,6 +49,8 @@ import * as assets from '../assets'
             <Tech />
             <h2 id="proy">Proyectos</h2>
 
+            <Projects /> 
+            <!--
             <div class="things">
                 <Thing
                     name="Trucomatic"
@@ -57,10 +60,6 @@ import * as assets from '../assets'
                     action-href="https://truco.cez.ar"
                     action="Abrir"
                 >
-                    <p>Un elegante <strong>contador de puntos para el Truco</strong>, el tradicional
-                    juego de cartas argentino.</p>
-                    <p>Mantiene un <strong>historial de partidas</strong>, permite <strong>personalizar el
-                    color</strong> y permite <strong>compartir la partida</strong> con otros.</p>
                 </Thing>
                 <Thing
                     name="Score"
@@ -92,7 +91,7 @@ import * as assets from '../assets'
                 >
                     Un sistema sencillo para la creación de tiendas online.
                 </Thing>
-               <!-- <Thing
+               <Thing
                     name="Videojuegos"
                     src="/img/dodge.webp"
                     alt="Captura de pantalla de dodgestar"
@@ -136,8 +135,9 @@ import * as assets from '../assets'
                 >
                     En mi GitHub podes encontrar otros proyectos open-source que hice o en
                     los que colaboré.
-                </Thing>-->
+                </Thing>
             </div>
+            -->
         </main>
     </body>
 </html>
@@ -177,6 +177,7 @@ import * as assets from '../assets'
 
     background-color: white;
     color: var(--text);
+    text-rendering: optimizeLegibility;
   }
 
   .pink {
@@ -235,25 +236,12 @@ main {
 
     box-sizing: border-box;
     width: 100%;
-    max-width: 80rem;
-
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.things {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
     max-width: 70rem;
-    gap: 2em;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    /*@media screen and (max-width: 40rem) {
-        grid-template-columns: 1fr;
-    }*/
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 2rem;
 }
 
 .aspect1-1 {
