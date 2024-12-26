@@ -5,6 +5,8 @@ import { getCollection } from 'astro:content';
 
 const projects = await getCollection('projects');
 
+projects.sort((a, b) => a.id.localeCompare(b.id))
+
 console.log(projects)
 ---
 
@@ -13,97 +15,19 @@ console.log(projects)
 {projects.map(p => (
     <div class="card">
         <div class="content">
-            <Image src={p.data.logosrc} alt={p.data.logoalt} class="title" />
-            <section set:html={p.rendered?.html ?? ""}>
-            </section>
+            <header>
+                <Image src={p.data.logosrc} alt={p.data.logoalt} />
+            </header>
+            <section set:html={p.rendered?.html ?? ""} />
         </div>
         <Image class="capture" src={p.data.thumbsrc} alt={p.data.thumbalt}  />
-        <a class="action" href={p.data.href ?? "#"}>
-            {p.data.hreflabel ?? "Abrir"}
-        </a>
+        {p.data.href && (
+            <a class="action" href={p.data.href}>
+                {p.data.hreflabel ?? "Abrir"}
+            </a>
+        )}
     </div>
 ))}
-
-<div class="card">
-    <div class="content">
-        <Image src={assets.trucomaticLogo} alt="Trucomatic" class="title" />
-        <section>
-        </section>
-        <p>
-            Un elegante <strong>contador de puntos para el Truco</strong>, el tradicional
-            juego de cartas argentino.
-        </p>
-        <p>
-            Mantiene un <strong>historial de partidas</strong>, permite <strong>personalizar el
-            color</strong> y permite <strong>compartir la partida</strong> con otros.
-        </p>
-    </div>
-    <Image class="capture" src={assets.trucomaticCap} alt="Captura de pantalla de un contador de puntos para el truco"  />
-    <a class="action" href="https://truco.cez.ar">
-        Abrir
-    </a>
-</div>
-
-<div class="card">
-    <div class="content">
-        <Image src={assets.eduactivoLogo} alt="Eduactivo" class="title" />
-        <section>
-        </section>
-        <p>
-            Una colección de <strong>herramientas interactivas</strong> para asistir en la <strong>enseñanza</strong>, principalmente para uso propio. Actualmente incluye:
-        </p>
-        <ul>
-            <li>
-                Herramientas para formar y comparar <strong>colores</strong> definiendo sus <strong>niveles de rojo, verde y azul</strong>, observando como se <strong>mezclan entre sí</strong>.
-            </li>
-            <li>
-                Simulador para un <strong>robot de transmición diferencial</strong>, programable usando un lenguaje gráfico de bloques <strong>similar a Scratch</strong>.
-            </li>
-        </ul>
-    </div>
-    <Image class="capture" src={assets.eduactivoCap} alt="Captura de pantalla de un contador de puntos para el truco"  />
-    <a class="action" href="https://truco.cez.ar">
-        Abrir
-    </a>
-</div>
-
-<div class="card">
-    <div class="content">
-        <Image src={assets.peonLogo} alt="PEON" class="title" />
-        <section>
-        </section>
-        <p>
-             Un sistema de <strong>comercio digital</strong> orientado a PyMEs.
-        </p>
-        <p>
-            Mediante una <strong>interfaz intuitiva</strong> es posible administrar el <strong>catálogo de productos</strong> y editar la
-            información visible del negocio. Los clientes pueden armar su <strong>carrito de compras</strong> y realizar su pedido mediante
-            WhatsApp.
-        </p>
-    </div>
-    <Image class="capture" src={assets.peonCap} alt="Captura de pantalla del administrador de productos de PEON"  />
-    <a class="action" href="https://truco.cez.ar">
-        Abrir
-    </a>
-</div>
-
-<div class="card">
-    <div class="content">
-        <Image src={assets.scoreLogo} alt="Score" class="title" />
-        <p>
-            Una aplicación web para el administrar partidas del juego de mesa Monopoly.
-        </p>
-        <p>
-            Permite administrar el <strong>dinero</strong> y <strong>propiedades</strong> 
-            que pertenecen a cada jugador, <strong>transferirlas</strong> entre ellos, 
-            manteniendo un historial.
-        </p>
-    </div>
-    <Image class="capture" src={assets.scoreCap} alt="Captura de pantalla del administrador de partidas de monopoly"  />
-    <a class="action" href="https://score.cez.ar">
-        Abrir
-    </a>
-</div>
 
 </div>
 
@@ -128,26 +52,6 @@ console.log(projects)
 
         width: 100%;
     }
-    .title {
-        grid-area: logo / logo / logoimg / logoimg;
-        font-size: 1.8em;
-        /*
-        background-color: white;
-        border: black solid 1px;
-        box-shadow: .25rem .25rem black;
-        border-radius: 1rem;
-        padding: 1rem;
-        line-height: 1.2; 
-        */
-    }
-    img.title {
-        /* height: 100%; */
-        width: auto;
-        margin-bottom: 1rem;
-        object-fit: contain;
-        height: 3rem;
-        max-width: 15rem;
-    }
     .capture {
         grid-area: logoimg  / logoimg / img / img;
         border: black solid 1px;
@@ -168,12 +72,27 @@ console.log(projects)
         box-shadow: .25rem .25rem var(--blue3);
         background-color: var(--blue1);
         border-radius: 1rem;
-        padding: 1.5rem 2rem 1.5rem 2.5rem;
         color: var(--blue4);
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         line-height: 1.25;
+        
+        & header {
+            border-radius: 1rem 1rem 0 0;
+            background-color: white;
+            border-bottom: 1px dashed var(--blue3);
+            padding: 1rem 1rem 1rem 2.5rem;
+            
+            img {
+                width: auto;
+                object-fit: contain;
+                height: 3rem;
+                max-width: 15rem;
+            }
+        }
 
-        section {
+        & section {
+            padding: 1.5rem 2rem 1.5rem 2.5rem;
+            
             & :global(p), :global(ul) {
                 margin-bottom: .5em;
             }
@@ -196,11 +115,12 @@ console.log(projects)
         align-self: end;
         justify-self: end;
         white-space: nowrap;
-        padding: 0.5em 1em;
+        padding: 0.25em 1em;
         color: var(--pink4);
         font-weight: bold;
         text-decoration: none;
         z-index: 1;
+        font-size: 1.5rem;
 
         transition: box-shadow 0.2s ease;
         &:hover {
