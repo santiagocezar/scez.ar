@@ -131,4 +131,36 @@ console.log(projects)
             }
         }
     }
+
+    @media screen and (max-width: 40rem) {
+        .card {
+            grid-template:
+                "logoimg .       .       .  " 1rem
+                ".       desc    img     .  " 6rem
+                ".       .       .       .  " auto
+                ".       .       descact .  " auto
+                ".       .       .       act" 1rem
+            /    1rem 40% 1fr 1rem;
+        }
+        .content {
+            & header {
+                border-radius: 1rem 1rem 0 0;
+                background-color: white;
+                border-bottom: 1px dashed var(--blue3);
+                padding: 1rem 1rem 1rem 2.5rem;
+                padding-left: 40%;
+
+                & img {
+                    width: auto;
+                    object-fit: contain;
+                    height: 3rem;
+                    max-width: 10rem;
+                }
+            }
+
+            & section {
+                padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+            }
+        }
+    }
 </style>

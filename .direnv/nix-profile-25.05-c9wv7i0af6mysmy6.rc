@@ -29,7 +29,7 @@ NIX_BINTOOLS='/nix/store/9bacph866qhmr2zfib1h49jixq5hhd01-binutils-wrapper-2.43.
 export NIX_BINTOOLS
 NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu='1'
 export NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu
-NIX_BUILD_CORES='8'
+NIX_BUILD_CORES='2'
 export NIX_BUILD_CORES
 NIX_CC='/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0'
 export NIX_CC
@@ -41,7 +41,7 @@ NIX_ENFORCE_NO_NATIVE='1'
 export NIX_ENFORCE_NO_NATIVE
 NIX_HARDENING_ENABLE='bindnow format fortify fortify3 pic relro stackprotector strictoverflow zerocallusedregs'
 export NIX_HARDENING_ENABLE
-NIX_LDFLAGS='-rpath /home/santi/Cositas/Work/scez.ar/outputs/out/lib '
+NIX_LDFLAGS='-rpath /home/santi/Cositas/scez.ar/outputs/out/lib '
 export NIX_LDFLAGS
 NIX_NO_SELF_RPATH='1'
 NIX_STORE='/nix/store'
@@ -127,7 +127,7 @@ declare -a envHostHostHooks=('ccWrapper_addCVars' 'bintoolsWrapper_addLDVars' )
 declare -a envHostTargetHooks=('ccWrapper_addCVars' 'bintoolsWrapper_addLDVars' )
 declare -a envTargetTargetHooks=()
 declare -a fixupOutputHooks=('if [ -z "${dontPatchELF-}" ]; then patchELF "$prefix"; fi' 'if [[ -z "${noAuditTmpdir-}" && -e "$prefix" ]]; then auditTmpdir "$prefix"; fi' 'if [ -z "${dontGzipMan-}" ]; then compressManPages "$prefix"; fi' '_moveLib64' '_moveSbin' '_moveSystemdUserUnits' 'patchShebangsAuto' '_pruneLibtoolFiles' '_doStrip' )
-guess='8'
+guess='2'
 initialPath='/nix/store/k48bha2fjqzarg52picsdfwlqx75aqbb-coreutils-9.5 /nix/store/lfhmpajzgfmgl8xrdvp2r9hdi2rf17wy-findutils-4.10.0 /nix/store/xrpvl6c1pyq7zazqnb41kgshmkr85da1-diffutils-3.10 /nix/store/gvivnz7rb2gz1vy7d9mdxgzj9didz7w2-gnused-4.9 /nix/store/14aswfz6pm8zvyyy927xzmi8x4rnvlc8-gnugrep-3.11 /nix/store/45jb5s18799g8day8zjixrvknj4chp6r-gawk-5.3.1 /nix/store/sdljgkhcmlflr785i4jffg1rvm294i1k-gnutar-1.35 /nix/store/pg1n8f8zlwh4q4bsbnm9gwhx7cbix1m6-gzip-1.13 /nix/store/y59bxw99pbld247dznzv352cqdhlybqi-bzip2-1.0.8-bin /nix/store/a08385589ajv3ahmp81nml9bh5dsi55n-gnumake-4.4.1 /nix/store/0irlcqx2n3qm6b1pc9rsd2i8qpvcccaj-bash-5.2p37 /nix/store/0knrdpnzi5s4igcvzw8yhkj8daq84a2v-patch-2.7.6 /nix/store/g6rf9zyrz8hrgz4r7sd2hab3j1afxdkr-xz-5.6.3-bin /nix/store/83jpg0nha0gp1pggdvsk7zh6wn5lgm00-file-5.45'
 mesonFlags=''
 export mesonFlags
@@ -135,7 +135,7 @@ name='nix-shell-env'
 export name
 nativeBuildInputs=''
 export nativeBuildInputs
-out='/home/santi/Cositas/Work/scez.ar/outputs/out'
+out='/home/santi/Cositas/scez.ar/outputs/out'
 export out
 outputBin='out'
 outputDev='out'
@@ -166,7 +166,7 @@ preConfigurePhases=' updateAutotoolsGnuConfigScriptsPhase'
 declare -a preFixupHooks=('_moveToShare' '_multioutDocs' '_multioutDevs' )
 preferLocalBuild='1'
 export preferLocalBuild
-prefix='/home/santi/Cositas/Work/scez.ar/outputs/out'
+prefix='/home/santi/Cositas/scez.ar/outputs/out'
 declare -a propagatedBuildDepFiles=('propagated-build-build-deps' 'propagated-native-build-inputs' 'propagated-build-target-deps' )
 propagatedBuildInputs=''
 export propagatedBuildInputs
