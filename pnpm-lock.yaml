@@ -30,6 +30,9 @@ importers:
       '@iconify-json/hugeicons':
         specifier: ^1.2.2
         version: 1.2.2
+      esbuild:
+        specifier: ^0.24.0
+        version: 0.24.0
       svgo:
         specifier: ^3.3.2
         version: 3.3.2

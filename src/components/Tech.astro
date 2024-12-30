@@ -15,31 +15,36 @@ import Aws from "~icons/simple-icons/amazonaws";
 import Sfml from "~icons/simple-icons/sfml";
 ---
 
-<div class="grid">
-    <div class="tech3"><Svelte /> <span>Svelte</span></div>
-    <div class="tech2"><AstroIcon /> <span>Astro</span></div>
-    <div class="tech3"><NixOS /> <span>NixOS</span></div>
-    <div class="tech1"><Cpp /> <span>C++</span></div>
-    <div class="tech0"></div>
-    <div class="tech2"><Rust /> <span>Rust</span></div>
-    <div class="tech1"><React /> <span>React</span></div>
-    <div class="tech1"><Typescript /> <span>TypeScript</span></div>
-    <div class="tech1"><Docker /> <span>Docker</span></div>
-    <div class="tech1"><Sql /> <span>MySQL</span></div>
-    <div class="tech3"><Linux /> <span>Linux</span></div>
-    <div class="tech2"><Python /> <span>Python</span></div>
-    <div class="tech3"><Godot /> <span>Godot</span></div>
-    <div class="tech2"><Aws /> <span>AWS</span></div>
-    <div class="tech0"></div>
-    <div class="tech1"><Sfml /> <span>SFML</span></div>
-</div>
+    <div class="grid">
+        <div class="tech3"><Svelte /> <span>Svelte</span></div>
+        <div class="tech2"><AstroIcon /> <span>Astro</span></div>
+        <div class="tech3"><NixOS /> <span>NixOS</span></div>
+        <div class="tech1"><Cpp /> <span>C++</span></div>
+        <div class="tech0"></div>
+        <div class="tech2"><Rust /> <span>Rust</span></div>
+        <div class="tech1"><React /> <span>React</span></div>
+        <div class="tech1"><Typescript /> <span>TypeScript</span></div>
+        <div class="tech1"><Docker /> <span>Docker</span></div>
+        <div class="tech1"><Sql /> <span>MySQL</span></div>
+        <div class="tech3"><Linux /> <span>Linux</span></div>
+        <div class="tech2"><Python /> <span>Python</span></div>
+        <div class="tech3"><Godot /> <span>Godot</span></div>
+        <div class="tech2"><Aws /> <span>AWS</span></div>
+        <div class="tech0"></div>
+        <div class="tech1"><Sfml /> <span>SFML</span></div>
+    </div>
 
 <style lang="less">
+    .wrapper {
+        display: grid;
+        place-content: center;
+    }
     .grid {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(6, auto);
         max-width: 50rem;
+        width: 100%;
         margin: 0 auto;
         gap: 0.5em;
         font-size: 0.75rem;
@@ -67,7 +72,7 @@ import Sfml from "~icons/simple-icons/sfml";
     }
     .tech1 {
         font-size: 2em;
-        background-color: var(--blue2);
+        background-color: var(--pink2);
     }
     .tech2 {
         font-size: 4em;
@@ -80,8 +85,8 @@ import Sfml from "~icons/simple-icons/sfml";
         font-size: 6em;
         grid-row: span 3;
         grid-column: span 3;
-        background-color: var(--blue4);
-        color: var(--blue2);
+        background-color: var(--pink3);
+        color: var(--pink1);
     }
     @media screen and (max-width: 40rem) {
         .grid {
