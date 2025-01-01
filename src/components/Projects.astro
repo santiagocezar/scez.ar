@@ -18,14 +18,18 @@ console.log(projects)
             <header>
                 <Image src={p.data.logosrc} alt={p.data.logoalt} />
             </header>
-            <section set:html={p.rendered?.html ?? ""} />
+            <section>
+                <Fragment set:html={p.rendered?.html ?? ""} />
+                {p.data.href && (
+                    <p>
+                        <a href={p.data.href}>
+                            {p.data.hreflabel ?? "Abrir"}
+                        </a>
+                    </p>
+                )}
+            </section>
         </div>
         <Image class="capture" src={p.data.thumbsrc} alt={p.data.thumbalt}  />
-        {p.data.href && (
-            <a class="action" href={p.data.href}>
-                {p.data.hreflabel ?? "Abrir"}
-            </a>
-        )}
     </div>
 ))}
 
@@ -43,12 +47,13 @@ console.log(projects)
     .card {
         display: grid;
         grid-template:
-            ".       .    desc .   .       .  " 2rem
-            "logoimg .    .    .   .       .  " 2rem
-            ".       .    .    .   .       .  " auto
-            ".       .    .    .   descact .  " auto
-            ".       .    img  .   .       act" 1rem
-           / 1.5fr   auto 1rem 3fr 1fr     1rem;
+            ".    .   logoimg .       .   .  " 1rem
+            "desc .   .       .       .   .  " 2rem
+            ".    .   .       .       .   .  " 2rem
+            ".    .   .       .       .   img" auto
+            ".    .   descact .       .   .  " 1rem
+            ".    .   .       .       act .  " 1rem
+           / 3fr 1fr  1rem 1.5fr   1rem auto;
 
         width: 100%;
     }
@@ -74,7 +79,6 @@ console.log(projects)
         border-radius: 1rem;
         color: var(--blue4);
         font-size: 1.25rem;
-        line-height: 1.25;
         
         & header {
             border-radius: 1rem 1rem 0 0;
@@ -89,46 +93,8 @@ console.log(projects)
                 max-width: 15rem;
             }
         }
-
         & section {
             padding: 1.5rem 2rem 1.5rem 2.5rem;
-            
-            & :global(p), :global(ul) {
-                margin-bottom: .5em;
-            }
-            & :global(ul) {
-                padding-left: 2em;
-            }
-            & :global(li) {
-                list-style-type: disc;
-            }
-        }
-    }
-
-
-    .action {
-        grid-area: descact / descact / act / act;
-        border: var(--pink3) solid 1px;
-        box-shadow: .25rem .25rem var(--pink3);
-        background-color: var(--pink1);
-        border-radius: 1rem;
-        align-self: end;
-        justify-self: end;
-        white-space: nowrap;
-        padding: 0.25em 1em;
-        color: var(--pink4);
-        font-weight: bold;
-        text-decoration: none;
-        z-index: 1;
-        font-size: 1.5rem;
-
-        transition: box-shadow 0.2s ease;
-        &:hover {
-            box-shadow: -0.3em 0.2em #f64b95, 0.3em -0.2em #00a6d2;
-            &:active {
-                box-shadow: none;
-                background-color: #6442a0;
-            }
         }
     }
 

@@ -1,0 +1,71 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-padding-top: 2 rem;
+    font-size: 16px;
+    scrollbar-color: #aaa #fff;
+    scroll-behavior: smooth;
+    font-family: "Barlow", sans-serif;
+
+    --black: #161027;
+    --white: #fff;
+
+    --text: var(--blue4);
+
+    --pink1: #fceeed;
+    --pink2: #ffbec9;
+    --pink3: #ff4294;
+    --pink4: #5F0C21;
+
+    --blue1: #dbf4ff;
+    --blue2: #a5c2ff;
+    --blue3: #3334fc;
+    --blue4: #240650;
+
+    --zigzag-size: 1rem;
+
+    --title-font: "Montserrat";
+
+    background-color: white;
+    color: var(--text);
+    text-rendering: optimizeLegibility;
+}
+
+.pink {
+    --color-bg: var(--pink-bg);
+    --color: var(--pink);
+    --color-bold: var(--pink-bold);
+}
+
+.cyan {
+    --color-bg: var(--cyan-bg);
+    --color: var(--cyan);
+    --color-bold: var(--cyan-bold);
+}
+
+section {
+    line-height: 1.25;
+
+    & :is(p, ul):not(:last-child) {
+        margin-bottom: .5em;
+    }
+    & ul {
+        padding-left: 2em;
+    }
+    & li {
+        list-style-type: disc;
+    }
+    & a {
+        color: var(--blue3);
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        &::after {
+            content: ' 🡕';
+        }
+    }
+}

@@ -11,14 +11,14 @@ import Right from "~icons/hugeicons/arrow-right-01";
         <div class="title">
             <div class="logo">
                 <img src="/img/sint2.svg" />
-                <h1>Santiago<br />Cézar</h1>
+<!--                 <h1>Santiago<br />Cézar</h1> -->
             </div>
-            <h2 class="tag">diseño y desarrollo de software</h2>
+<!--             <h2 class="tag">diseño y desarrollo de software</h2> -->
         </div>
         <nav>
             <a href="#me">Sobre mí <Right /></a>
-            <a href="#tech">Tecnologías <Right /></a>
             <a href="#proy">Proyectos <Right /></a>
+            <a href="#tech">Tecnologías <Right /></a>
         </nav>
         <div class="links">
             <a
@@ -101,7 +101,7 @@ import Right from "~icons/hugeicons/arrow-right-01";
     .layout {
         display: grid;
         grid-template:
-            "logo" calc(9 * var(--zigzag-size))
+            "logo" calc(7 * var(--zigzag-size))
             "nav" 1fr
             "link" auto
             / 1fr;
@@ -117,7 +117,7 @@ import Right from "~icons/hugeicons/arrow-right-01";
         font-size: 0.75rem;
         padding-left: 1.5rem;
         padding-right: 2rem;
-        justify-self: start;
+/*         justify-self: start; */
     }
 
     .logo {
@@ -156,14 +156,15 @@ import Right from "~icons/hugeicons/arrow-right-01";
             align-items: center;
             justify-content: space-between;
             text-decoration: none;
-            font-size: 1.5em;
+            font-size: 1.1em;
+            font-weight: bold;
             font-family: var(--title-font);
             padding: 0 2rem 0 1.5rem;
             gap: 0.5rem;
             background-repeat: space;
             border-bottom: 1px dashed var(--pink3);
             position: relative;
-            height: calc(4 * var(--zigzag-size));
+            height: calc(3 * var(--zigzag-size));
 
             &:first-child {
                 border-top: 1px dashed var(--pink3);

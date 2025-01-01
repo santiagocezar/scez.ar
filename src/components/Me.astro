@@ -20,8 +20,7 @@ if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate())
 
 <div class="root">
     <div class="img"></div>
-    <div class="text" set:html={content.replace('@age@', age)}>
-    </div>
+    <section class="text" set:html={content.replace('@age@', age)} />
 </div>
 
 <style>
@@ -29,12 +28,12 @@ if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate())
         display: grid;
         margin: 0 auto;
         max-width: 60rem;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         grid-template:
             ". i1 ." 1fr
             "t t i2" 4fr
             "t t ." 1fr
-            / 2fr 1fr 2fr;
+            / 2fr 2fr 2fr;
     }
     .text {
         grid-area: t;
@@ -47,7 +46,6 @@ if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate())
         border-radius: 1em;
         height: fit-content;
         min-height: fit-content;
-        text-wrap: balance;
     }
     .img {
         grid-area: i1-start / i1-start / i2-end / i2-end;

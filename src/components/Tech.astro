@@ -41,8 +41,17 @@ import Sfml from "~icons/simple-icons/sfml";
     }
     .grid {
         display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(6, auto);
+        --rows: 6;
+        --cols: 10;
+        --row-ratio: 1;
+        --col-ratio: 1;
+
+        aspect-ratio:
+            calc(var(--cols) * var(--col-ratio)) /
+            calc(var(--rows) * var(--row-ratio));
+
+        grid-template-columns: repeat(var(--cols), 1fr);
+        grid-template-rows: repeat(var(--rows), auto);
         max-width: 50rem;
         width: 100%;
         margin: 0 auto;
@@ -53,7 +62,6 @@ import Sfml from "~icons/simple-icons/sfml";
     .tech1,
     .tech2,
     .tech3 {
-        aspect-ratio: 1 / 1;
         align-self: stretch;
         border-radius: 1rem;
         display: flex;
@@ -92,8 +100,8 @@ import Sfml from "~icons/simple-icons/sfml";
         .grid {
             font-size: 0.85em;
             grid-auto-flow: column;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(10, auto);
+            --rows: 10;
+            --cols: 6;
         }
         .tech0,
         .tech1,
