@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    sodipodi:docname="favicon.svg"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    id="svg872"
    version="1.1"
-   viewBox="0 0 8.4666659 8.4666662"
+   viewBox="0 0 31.999998 31.999998"
    height="31.999998"
    width="31.999998"
    inkscape:export-filename="favicon.png"
@@ -106,7 +106,7 @@
      inkscape:window-maximized="1"
      inkscape:window-y="0"
      inkscape:window-x="0"
-     inkscape:window-height="699"
+     inkscape:window-height="700"
      inkscape:window-width="1366"
      inkscape:guide-bbox="true"
      showguides="true"
@@ -116,9 +116,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="14.428117"
-     inkscape:cx="-67.112603"
-     inkscape:zoom="2.2872008"
+     inkscape:cy="17.659716"
+     inkscape:cx="16.137327"
+     inkscape:zoom="8.2107774"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      borderopacity="1.0"
@@ -132,8 +132,11 @@
        type="xygrid"
        id="grid960"
        empspacing="4"
-       originx="-2.6458279"
-       originy="7.9375004" />
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px" />
   </sodipodi:namedview>
   <metadata
      id="metadata869">
@@ -143,7 +146,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -152,27 +154,14 @@
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Capa 1">
-    <rect
-       ry="0.52916843"
-       y="144.63318"
-       x="217.58174"
-       height="8.4666662"
-       width="8.4666662"
-       id="rect877"
-       style="opacity:1;fill:#161027;fill-opacity:1;stroke-width:0.0649999;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill" />
     <path
-       sodipodi:nodetypes="ccccccccccccccccc"
-       d="m 218.64009,148.33743 v 0.26459 1.32287 c 0,1.169 0.94766,2.11667 2.11666,2.11667 h 1.3229 0.26458 v -0.26459 -0.52916 -0.26459 h -0.26458 -1.3229 c -0.5845,0 -1.05833,-0.47383 -1.05833,-1.05833 v -1.32287 -0.26459 h -0.26458 -0.52917 z"
-       style="opacity:1;fill:#ff4294;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       id="path1616" />
+       d="m 220.08173,168.63318 c 0,6.00004 2.99997,6.00004 6.00004,6.00004 2.99996,0 5.01302,-0.0794 5.99993,-6.00004 l 3.00007,-16 c 0.98759,-5.91897 2.99997,-6.00004 5.99993,-6.00004 3.00007,0 6.00004,0 6.00004,6.00004"
+       style="fill:none;stroke:#3334fc;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+       id="path3"
+       sodipodi:nodetypes="csccsc" />
     <path
-       id="path1618"
-       d="m 221.28594,147.27902 v 0.26458 1.85209 a 1.0583334,1.0583334 0 0 0 1.04231,1.05833 h 0.016 v -0.26458 -1.85209 a 1.0583334,1.0583334 0 0 0 -1.04231,-1.05833 z"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
-    <path
-       sodipodi:nodetypes="ccccccccccccccccc"
-       d="m 221.2859,145.69155 v 0.26459 0.52916 0.26459 h 0.26458 1.32294 c 0.5845,0 1.05834,0.47383 1.05834,1.05833 v 1.32295 0.26459 h 0.26458 0.52917 0.26458 v -0.26459 -1.32295 c 0,-1.16901 -0.94766,-2.11667 -2.11667,-2.11667 h -1.32294 z"
-       style="opacity:1;fill:#18d1ff;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       id="path1620" />
+       d="m 241.0817,163.63314 c 0,3.00008 -2.99996,3.00008 -9,3.00008 -5.99993,0 -5.99993,-3.00008 -5.99993,-6.00004 0,-2.99996 0,-6.00004 5.99993,-6.00004 6.00004,0 9,0 9,3.00008"
+       style="fill:none;stroke:#ff4294;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+       id="path4" />
   </g>
 </svg>
