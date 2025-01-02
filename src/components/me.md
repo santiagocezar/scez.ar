@@ -2,7 +2,7 @@ Soy **Santiago Cézar**, desarrollador y diseñador de software. Uso este espaci
 
 Estoy cursando el 3° año de la **Ingeniería en Sistemas de Información** en la UTN, tras finalizar el secundario como **Técnico en Programación**.
 
-Participo en proyectos de **investigación y desarrollo** en la universidad, **dicto clases** en un secundario y atiendo el **negocio** de mi familia.
+Participo en proyectos de **investigación y desarrollo** en la universidad, **dicto clases** en una escuela secundaria y apoyo en las actividades de la **librería** de mi familia.
 
 Me gusta bastante el diseño gráfico, dibujar, matemática, las consolas retro y estoy siempre dispuesto a aprender cosas nuevas.
 
