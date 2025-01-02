@@ -35,12 +35,41 @@ console.log(projects)
 
 </div>
 
+<!--
+<details class="">
+    <summary>
+        Otros
+    </summary>
+    hola
+</details>
+-->
+
+
 <style>
+    details {
+        border: var(--pink3) solid 1px;
+        box-shadow: .25rem .25rem var(--pink3);
+        background-color: var(--pink1);
+        border-radius: 1rem;
+        color: var(--pink4);
+        font-size: 1.25rem;
+        overflow: hidden;
+    }
+    summary {
+        border-radius: 1rem 1rem 0 0;
+        background-color: white;
+        border-bottom: 1px dashed var(--pink3);
+        padding: 1rem 1rem 1rem 2.5rem;
+        margin-bottom: -1px;
+    }
+
     .projects {
         display: flex;
+        grid-column: body-start / body-end;
         flex-direction: column;
         width: 100%;
         margin: 0 auto;
+        padding: 0 2rem;
         gap: 2em;
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }

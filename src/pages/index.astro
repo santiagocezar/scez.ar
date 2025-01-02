@@ -179,22 +179,36 @@ body {
 }
 
 main {
-    padding: 3rem 3rem 4rem 3rem;
+    --content-width: 60rem;
+    --cols: 12;
+    --col-w: calc(var(--content-width) / var(--cols));
+    --pad-x: 3rem;
+
+    display: grid;
+    grid-template-columns:
+        [body-start] minmax(var(--pad-x), 1fr)
+        repeat(12, [col-start] minmax(auto, var(--col-w)) [col-end])
+        minmax(var(--pad-x), 1fr) [body-end];
+
+    & > :global(*) {
+        grid-column: col-start 1 / col-end -1;
+    }
+
     grid-row-start: 1;
     grid-area: content;
 
     box-sizing: border-box;
     width: 100%;
-    max-width: 70rem;
 
-    display: flex;
-    flex-direction: column;
     margin: 0 auto;
-    gap: 2rem;
+    gap: 2rem 0;
+    padding: 2rem 0 4rem 0;
 }
 
 @media screen and (max-width: 40rem) {
-    padding: 3rem 1.25rem 3rem 1.25rem;
+    main {
+        padding: 1.25rem 0 1.25rem 0;
+    }
 }
 
 .aspect1-1 {
@@ -241,6 +255,9 @@ h2 {
             "sidebar" auto
             "content" auto
             / 1fr;
+    }
+    main {
+        --pad-x: 2rem;
     }
 }
 </style>
