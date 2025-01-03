@@ -1,7 +1,7 @@
 ---
-logosrc: "../assets/logo/eduactivo.svg"
+logosrc: "./logo/eduactivo.svg"
 logoalt: Eduactivo
-thumbsrc: "../assets/captures/eduactivo.png"
+thumbsrc: "./captures/eduactivo.png"
 thumbalt: Captura de pantalla de el robot haciendo unos garabatos en rojo con un joystick levemente activado debajo.
 href: "https://eduactivo.cez.ar"
 ---

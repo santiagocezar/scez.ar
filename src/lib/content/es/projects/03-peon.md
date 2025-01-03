@@ -1,7 +1,7 @@
 ---
-logosrc: "../assets/logo/peon.svg"
+logosrc: "./logo/peon.svg"
 logoalt: Peon
-thumbsrc: "../assets/captures/peon.png"
+thumbsrc: "./captures/peon.png"
 thumbalt: Captura de pantalla del administrador de productos de PEON.
 href: "https://elbarquito.ar"
 ---

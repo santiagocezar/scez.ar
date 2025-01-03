@@ -1,7 +1,7 @@
 ---
-logosrc: "../assets/logo/score.svg"
+logosrc: "./logo/score.svg"
 logoalt: Score
-thumbsrc: "../assets/captures/score.png"
+thumbsrc: "./captures/score.png"
 thumbalt: Captura de pantalla del administrador de partidas de Monopoly.
 href: "https://score.cez.ar"
 ---

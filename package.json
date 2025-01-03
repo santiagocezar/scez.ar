@@ -4,28 +4,38 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev --host",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "format": "prettier --write .",
+    "lint": "prettier --check ."
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/santiagocezar/scez.ar"
   },
   "dependencies": {
-    "@iconify-json/simple-icons": "^1.2.14",
-    "@iconify/collections": "^1.0.491",
-    "astro": "^5.0.3",
-    "less": "^4.2.1",
-    "unplugin-icons": "^0.21.0"
+    "@inlang/paraglide-sveltekit": "^0.11.1",
+    "vite-plugin-markdown": "^2.2.0"
   },
   "devDependencies": {
-    "@astrojs/language-server": "^2.15.4",
     "@iconify-json/hugeicons": "^1.2.2",
+    "@iconify-json/simple-icons": "^1.2.14",
+    "@iconify/collections": "^1.0.491",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/adapter-static": "^3.0.8",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "esbuild": "^0.24.0",
+    "prettier": "^3.3.2",
+    "prettier-plugin-svelte": "^3.2.6",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "svelte-language-server": "^0.17.8",
     "svgo": "^3.3.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.0.0",
+    "vite": "^5.4.11"
   }
 }

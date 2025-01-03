@@ -1,38 +1,59 @@
----
-import * as assets from '../assets'
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
+<script lang="ts">
+    interface Frontmatter {
+        logosrc: string;
+        logoalt: string;
+        thumbsrc: string;
+        thumbalt: string;
+        href?: string;
+        hreflabel?: string;
+    }
 
-const projects = await getCollection('projects');
+    import assets from "$assets";
 
-projects.sort((a, b) => a.id.localeCompare(b.id))
+    console.log(assets);
 
-console.log(projects)
----
+    const projects = Object.entries(
+        import.meta.glob<MarkdownFile<Frontmatter>>(
+            "$lib/content/es/projects/*.md",
+            {
+                eager: true,
+            },
+        ),
+    );
+
+    projects.sort(([a], [b]) => a.localeCompare(b));
+
+    console.log(projects);
+</script>
 
 <div class="projects">
-
-{projects.map(p => (
-    <div class="card">
-        <div class="content">
-            <header>
-                <Image src={p.data.logosrc} alt={p.data.logoalt} />
-            </header>
-            <section>
-                <Fragment set:html={p.rendered?.html ?? ""} />
-                {p.data.href && (
-                    <p>
-                        <a href={p.data.href}>
-                            {p.data.hreflabel ?? "Abrir"}
-                        </a>
-                    </p>
-                )}
-            </section>
+    {#each projects as [_id, project]}
+        <div class="card">
+            <div class="content">
+                <header>
+                    <img
+                        src={assets[project.attributes.logosrc]}
+                        alt={project.attributes.logoalt}
+                    />
+                </header>
+                <section>
+                    {@html project.html ?? ""}
+                    {#if project.attributes.href}
+                        <p>
+                            <a href={project.attributes.href}>
+                                {project.attributes.hreflabel ?? "Abrir"}
+                            </a>
+                        </p>
+                    {/if}
+                </section>
+            </div>
+            <img
+                class="capture"
+                src={assets[project.attributes.thumbsrc]}
+                alt={project.attributes.thumbalt}
+            />
         </div>
-        <Image class="capture" src={p.data.thumbsrc} alt={p.data.thumbalt}  />
-    </div>
-))}
-
+    {/each}
 </div>
 
 <!--
@@ -44,11 +65,10 @@ console.log(projects)
 </details>
 -->
 
-
 <style>
     details {
         border: var(--pink3) solid 1px;
-        box-shadow: .25rem .25rem var(--pink3);
+        box-shadow: 0.25rem 0.25rem var(--pink3);
         background-color: var(--pink1);
         border-radius: 1rem;
         color: var(--pink4);
@@ -82,14 +102,14 @@ console.log(projects)
             ".    .   .       .       .   img" auto
             ".    .   descact .       .   .  " 1rem
             ".    .   .       .       act .  " 1rem
-           / 3fr 1fr  1rem 1.5fr   1rem auto;
+            / 3fr 1fr 1rem 1.5fr 1rem auto;
 
         width: 100%;
     }
     .capture {
-        grid-area: logoimg  / logoimg / img / img;
+        grid-area: logoimg / logoimg / img / img;
         border: black solid 1px;
-        box-shadow: .25rem .25rem black;
+        box-shadow: 0.25rem 0.25rem black;
         border-radius: 1rem;
         object-fit: cover;
         object-position: top;
@@ -97,24 +117,21 @@ console.log(projects)
         width: auto;
         aspect-ratio: 1 / 1;
     }
-    &.compact .content .title {
-        font-size: 1.5em;
-    }
     .content {
         grid-area: desc / desc / descact / descact;
         border: var(--blue3) solid 1px;
-        box-shadow: .25rem .25rem var(--blue3);
+        box-shadow: 0.25rem 0.25rem var(--blue3);
         background-color: var(--blue1);
         border-radius: 1rem;
         color: var(--blue4);
         font-size: 1.25rem;
-        
+
         & header {
             border-radius: 1rem 1rem 0 0;
             background-color: white;
             border-bottom: 1px dashed var(--blue3);
             padding: 1rem 1rem 1rem 2.5rem;
-            
+
             img {
                 width: auto;
                 object-fit: contain;
@@ -135,7 +152,7 @@ console.log(projects)
                 ".       .       .       .  " auto
                 ".       .       descact .  " auto
                 ".       .       .       act" 1rem
-            /    1rem 40% 1fr 1rem;
+                / 1rem 40% 1fr 1rem;
         }
         .content {
             & header {
