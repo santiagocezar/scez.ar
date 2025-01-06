@@ -1,4 +1,5 @@
 ---
+order: 4
 logosrc: "../assets/logo/peon.svg"
 logoalt: Peon
 thumbsrc: "../assets/captures/peon.png"

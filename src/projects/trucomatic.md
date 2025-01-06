@@ -1,4 +1,5 @@
 ---
+order: 1
 logosrc: "../assets/logo/trucomatic.svg"
 logoalt: Trucomatic
 thumbsrc: "../assets/captures/trucomatic.png"

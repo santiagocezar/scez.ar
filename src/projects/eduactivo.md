@@ -1,4 +1,5 @@
 ---
+order: 2
 logosrc: "../assets/logo/eduactivo.svg"
 logoalt: Eduactivo
 thumbsrc: "../assets/captures/eduactivo.png"

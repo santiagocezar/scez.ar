@@ -1,4 +1,5 @@
 ---
+order: 5
 logosrc: "../assets/logo/score.svg"
 logoalt: Score
 thumbsrc: "../assets/captures/score.png"

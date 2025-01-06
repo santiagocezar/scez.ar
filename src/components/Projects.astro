@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 
 const projects = await getCollection('projects');
 
-projects.sort((a, b) => a.id.localeCompare(b.id))
+projects.sort((a, b) => a.data.order - b.data.order)
 
 console.log(projects)
 ---
