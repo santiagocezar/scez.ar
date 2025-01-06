@@ -49,6 +49,7 @@
 }
 
 section {
+    font-size: 1.25rem;
     line-height: 1.25;
 
     & :is(p, ul):not(:last-child) {
@@ -65,13 +66,28 @@ section {
         text-decoration: underline;
         text-decoration-style: dashed;
         &::after {
-            content: ' 🡕';
+            content: ' ↗';
         }
     }
 }
 
+h1, h2 {
+    font-family: var(--title-font);
+    font-weight: 700;
+    border-bottom: 1px dashed var(--blue3);
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.25em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
 @media screen and (max-width: 40rem) {
     :root {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
