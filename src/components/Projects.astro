@@ -65,14 +65,12 @@ console.log(projects)
 
     .projects {
         display: grid;
-        grid-column: body-start / body-end;
+        grid-column: wide1-start 1 / wide2-end -1;
         grid-auto-columns: 100%;
         grid-template-rows: 1fr;
         grid-auto-flow: row;
-        overflow-x: auto;
         width: 100%;
         margin: 0 auto;
-        padding: 0 2rem;
         gap: 2em;
     }
     .card {
@@ -136,31 +134,31 @@ console.log(projects)
         }
         .card {
             grid-template:
-                "logoimg .       .       .  " 1rem
-                ".       desc    img     .  " 6rem
-                ".       .       .       .  " auto
-                ".       .       descact .  " auto
-                ".       .       .       act" 1rem
-            /    1rem 40% 1fr 1rem;
+                ".    logoimg .  " 1fr
+                "desc .       .  " 1rem
+                ".    .       img" 1rem
+                ".    descact .  " auto
+            /    1rem 1fr 1rem;
         }
         .content {
+            z-index: 1;
+            
             & header {
                 border-radius: 1rem 1rem 0 0;
                 background-color: white;
                 border-bottom: 1px dashed var(--blue3);
-                padding: 1rem 1rem 1rem 2.5rem;
-                padding-left: 40%;
+                padding: 1rem 1rem 1rem 1.5rem;
 
                 & img {
                     width: auto;
                     object-fit: contain;
                     height: 3rem;
-                    max-width: 10rem;
+                    max-width: 80%;
                 }
             }
 
             & section {
-                padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+                padding: .75rem 1rem 1.5rem 1rem;
             }
         }
     }

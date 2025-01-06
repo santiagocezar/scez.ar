@@ -181,13 +181,16 @@ body {
 main {
     --content-width: 60rem;
     --cols: 12;
+    --wide-cols: 2;
     --col-w: calc(var(--content-width) / var(--cols));
     --pad-x: 3rem;
 
     display: grid;
     grid-template-columns:
         [body-start] minmax(var(--pad-x), 1fr)
+        repeat(var(--wide-cols), [wide1-start] minmax(auto, var(--col-w)) [wide1-end])
         repeat(12, [col-start] minmax(auto, var(--col-w)) [col-end])
+        repeat(var(--wide-cols), [wide2-start] minmax(auto, var(--col-w)) [wide2-end])
         minmax(var(--pad-x), 1fr) [body-end];
 
     & > :global(*) {
@@ -203,12 +206,6 @@ main {
     margin: 0 auto;
     gap: 2rem 0;
     padding: 2rem 0 4rem 0;
-}
-
-@media screen and (max-width: 40rem) {
-    main {
-        padding: 1.25rem 0 1.25rem 0;
-    }
 }
 
 .aspect1-1 {
@@ -249,6 +246,12 @@ h2 {
     max-width: 70rem;
 }
 
+@media screen and (max-width: 40rem) {
+    main {
+        padding: 1.25rem 0 1.25rem 0;
+    }
+}
+
 @media screen and (max-width: 60rem) {
     body {
         grid-template:
@@ -257,7 +260,9 @@ h2 {
             / 1fr;
     }
     main {
-        --pad-x: 2rem;
+        --content-width: 40rem;
+        --pad-x: 1.25rem;
+        --wide-cols: 1;
     }
 }
 </style>
