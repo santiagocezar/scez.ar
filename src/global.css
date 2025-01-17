@@ -31,7 +31,12 @@
 
     --title-font: "Montserrat";
 
+    --c: color-mix(in srgb, transparent, var(--pink2) 10%);
+        
     background-color: white;
+    background-image: repeating-linear-gradient(45deg, var(--c) 0, var(--c) 2rem, #0000 2rem, #0000 4rem),
+        repeating-linear-gradient(135deg, var(--c) 0, var(--c) 2rem, #0000 2rem, #0000 4rem);
+    
     color: var(--text);
     text-rendering: optimizeLegibility;
 }

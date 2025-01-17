@@ -18,10 +18,12 @@ if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate())
 
 ---
 
+<section set:html={content.replace('@age@', age)} />
+<!--
 <div class="root">
     <div class="img"></div>
-    <section class="text" set:html={content.replace('@age@', age)} />
 </div>
+-->
 
 <style>
     .root {
@@ -35,7 +37,7 @@ if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate())
             "t t ." 1fr
             / 2fr 2fr 2fr;
     }
-    .text {
+    section {
         grid-area: t;
         border: var(--blue3) solid 1px;
         box-shadow: .25rem .25rem var(--blue3);

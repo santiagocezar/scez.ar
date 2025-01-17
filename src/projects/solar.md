@@ -10,4 +10,4 @@ hreflabel: "Artículo"
 
 Una herramienta de **predicción de valores de generación** representativos de la Región Centro de Argentina.
 
-La calculadora fotovoltaica **asiste** a los usuarios en la **elección** de sistemas recolectores de **energía solar**, trae una **interfaz técnica** que visualiza la predicción en **gráficos de barras** y una interfaz interactiva con el **modelo 3D de la instalación** que permite **comparar** la generación con el **consumo de electrodomésticos**.
+La calculadora fotovoltaica es un proyecto de I+D **asiste** a los usuarios en la **elección** de sistemas recolectores de **energía solar**, trae una **interfaz técnica** que visualiza la predicción en **gráficos de barras** y una interfaz interactiva con el **modelo 3D de la instalación** que permite **comparar** la generación con el **consumo de electrodomésticos**.
