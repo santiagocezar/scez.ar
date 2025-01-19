@@ -1,12 +1,12 @@
 ---
+logosrc: "../assets/logo/bingomatic2.svg"
+logoalt: Bingomatic
+thumbsrc: "../assets/captures/bingo.png"
+thumbalt: Captura de pantalla de la grilla del bingo.
+href: "https://bingo.cez.ar"
 order: 5
-logosrc: "../assets/logo/score.svg"
-logoalt: Score
-thumbsrc: "../assets/captures/score.png"
-thumbalt: Captura de pantalla del administrador de partidas de Monopoly.
-href: "https://score.cez.ar"
 ---
 
-Una aplicación web para **administrar partidas** del juego de mesa **Monopoly**.
+Un **bolillero virtual** simple, para acompañar jugando a la loteria.
 
-Permite administrar el **dinero** y **propiedades** que pertenecen a cada jugador, **transferirlas** entre ellos, manteniendo un historial.
+Al igual que trucomatic, mantiene un **historial** y permite **compartir partidas**.

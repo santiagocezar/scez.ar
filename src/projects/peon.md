@@ -1,10 +1,10 @@
 ---
-order: 4
 logosrc: "../assets/logo/peon.svg"
 logoalt: Peon
 thumbsrc: "../assets/captures/peon.png"
 thumbalt: Captura de pantalla del administrador de productos de PEON.
 href: "https://elbarquito.ar"
+order: 4
 ---
 
 Un sistema de **comercio digital** orientado a PyMEs.

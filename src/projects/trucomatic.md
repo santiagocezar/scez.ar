@@ -1,10 +1,10 @@
 ---
-order: 1
 logosrc: "../assets/logo/trucomatic.svg"
 logoalt: Trucomatic
 thumbsrc: "../assets/captures/trucomatic.png"
 thumbalt: Captura de pantalla de un contador de puntos para el truco.
 href: "https://truco.cez.ar"
+order: 1
 ---
 
 Un elegante **contador de puntos para el Truco**, el tradicional juego de cartas argentino.

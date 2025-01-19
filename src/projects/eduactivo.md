@@ -1,10 +1,10 @@
 ---
-order: 2
 logosrc: "../assets/logo/eduactivo.svg"
 logoalt: Eduactivo
 thumbsrc: "../assets/captures/eduactivo.png"
 thumbalt: Captura de pantalla de el robot haciendo unos garabatos en rojo con un joystick levemente activado debajo.
 href: "https://eduactivo.cez.ar"
+order: 2
 ---
 
 Una colección de **herramientas interactivas** para asistir en la **enseñanza**, principalmente para uso propio. Actualmente incluye:
