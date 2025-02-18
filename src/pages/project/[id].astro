@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { render, getCollection } from 'astro:content';
-import Main from "../../layouts/Main.astro";
+import Main from "$lib/layouts/Main.astro";
 
 export async function getStaticPaths() {
     const projects = await getCollection('projects');
