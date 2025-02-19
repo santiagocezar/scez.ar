@@ -15,7 +15,7 @@
     --black: #161027;
     --white: #fff;
 
-    --text: var(--blue4);
+    --text: var(--black);
 
     --pink1: #fceeed;
     --pink2: #ffbec9;
@@ -89,6 +89,27 @@ h1 {
 
 h2 {
     font-size: 2em;
+}
+
+.card-blue,
+.card-pink,
+.card {
+    border: var(--card-border, var(--black)) solid 1px;
+    box-shadow: 0.25rem 0.25rem var(--card-shadow, var(--card-border, var(--black)));
+    background-color: var(--card-background);
+    border-radius: 1rem;
+    color: var(--card-text);
+}
+
+.card-pink {
+    --card-border: var(--pink3);
+    --card-background: var(--pink1);
+    --card-text: var(--pink4);
+}
+.card-blue {
+    --card-border: var(--blue3);
+    --card-background: var(--blue1);
+    --card-text: var(--blue4);
 }
 
 @media screen and (max-width: 40rem) {

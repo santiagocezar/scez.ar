@@ -20,8 +20,8 @@ const otherProjects = other as {
 <div class="projects">
     {
         projects.map((p) => (
-            <div class="card">
-                <div class="content">
+            <div class="big-item">
+                <div class="content card-blue">
                     <header>
                         <Image src={p.data.logosrc} alt={p.data.logoalt} />
                     </header>
@@ -37,7 +37,7 @@ const otherProjects = other as {
                     </section>
                 </div>
                 <Image
-                    class="capture"
+                    class="capture card"
                     src={p.data.thumbsrc}
                     alt={p.data.thumbalt}
                 />
@@ -46,7 +46,7 @@ const otherProjects = other as {
     }
 </div>
 
-<details class="">
+<details class="card-pink">
     <summary>
         Otros
     </summary>
@@ -65,11 +65,6 @@ const otherProjects = other as {
 
 <style>
     details {
-        border: var(--pink3) solid 1px;
-        box-shadow: 0.25rem 0.25rem var(--pink3);
-        background-color: var(--pink1);
-        border-radius: 1rem;
-        color: var(--pink4);
         font-size: 1.25rem;
         overflow: hidden;
     }
@@ -118,7 +113,7 @@ const otherProjects = other as {
         margin: 0 auto;
         gap: 2em;
     }
-    .card {
+    .big-item {
         display: grid;
         grid-template:
             ".    .   logoimg .       .   .  " 1rem
@@ -133,9 +128,6 @@ const otherProjects = other as {
     }
     .capture {
         grid-area: logoimg / logoimg / img / img;
-        border: black solid 1px;
-        box-shadow: 0.25rem 0.25rem black;
-        border-radius: 1rem;
         object-fit: cover;
         object-position: top;
         height: 100%;
@@ -147,11 +139,6 @@ const otherProjects = other as {
     }
     .content {
         grid-area: desc / desc / descact / descact;
-        border: var(--blue3) solid 1px;
-        box-shadow: 0.25rem 0.25rem var(--blue3);
-        background-color: var(--blue1);
-        border-radius: 1rem;
-        color: var(--blue4);
         font-size: 1.25rem;
 
         & header {
@@ -189,7 +176,7 @@ const otherProjects = other as {
                 order: 1;
             }
         }
-        .card {
+        .big-item {
             grid-template:
                 ".    .       logoimg .  " 1fr
                 "desc .       .       .  " 1rem
