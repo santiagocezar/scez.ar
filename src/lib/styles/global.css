@@ -27,30 +27,69 @@
     --blue3: #3334fc;
     --blue4: #240650;
 
+    --pink0: #fef4f6;
+    --pink1: #ffdee6;
+    --pink2: #ec7fa4;
+    --pink3: #c2216c;
+    --pink4: #2a0d18;
+
+    --blue0: #eaf0f8;
+    --blue1: #c9e0fe;
+    --blue2: #7796ff;
+    --blue3: #3346d1;
+    --blue4: #0b1023;
+
+    --pink-bg: var(--pink0);
+    --pink-border: var(--pink3);
+    --pink-text: var(--pink4);
+
+    --blue-bg: var(--blue0);
+    --blue-border: var(--blue3);
+    --blue-text: var(--blue4);
+
     --zigzag-size: 1rem;
 
     --title-font: "Montserrat";
 
-    --c: color-mix(in srgb, transparent, var(--pink2) 10%);
+    --c: color-mix(in srgb, transparent, var(--pink-border) 5%);
         
     background-color: white;
-    background-image: repeating-linear-gradient(45deg, var(--c) 0, var(--c) 2rem, #0000 2rem, #0000 4rem),
+    background-image: 
+        repeating-linear-gradient(45deg, var(--c) 0, var(--c) 2rem, #0000 2rem, #0000 4rem),
         repeating-linear-gradient(135deg, var(--c) 0, var(--c) 2rem, #0000 2rem, #0000 4rem);
+    
+    background-attachment: fixed;
     
     color: var(--text);
     text-rendering: optimizeLegibility;
 }
 
-.pink {
-    --color-bg: var(--pink-bg);
-    --color: var(--pink);
-    --color-bold: var(--pink-bold);
-}
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* --pink0: #fef4f6;
+        --pink1: #ffdee6;
+        --pink2: #ec7fa4;
+        --pink3: #7b2749;
+        --pink4: #580a2e;
+    
+        --blue0: #eaf0f8;
+        --blue1: #c9e0fe;
+        --blue2: #7796ff;
+        --blue3: #3346d1;
+        --blue4: #240650; */
+        
+        --pink-bg: var(--pink4);
+        --pink-border: var(--pink2);
+        --pink-text: var(--pink0);
 
-.cyan {
-    --color-bg: var(--cyan-bg);
-    --color: var(--cyan);
-    --color-bold: var(--cyan-bold);
+        --blue-bg: var(--blue4);
+        --blue-border: var(--blue2);
+        --blue-text: var(--blue0);
+        
+        background-color: var(--black);
+        --text: var(--white);
+        --c: color-mix(in srgb, transparent, var(--pink-border) 5%)
+    }
 }
 
 section {
@@ -67,7 +106,7 @@ section {
         list-style-type: disc;
     }
     & a {
-        color: var(--blue3);
+        color: var(--blue-border);
         text-decoration: underline;
         text-decoration-style: dashed;
         &::after {
@@ -91,25 +130,25 @@ h2 {
     font-size: 2em;
 }
 
-.card-blue,
 .card-pink,
+.card-blue,
 .card {
-    border: var(--card-border, var(--black)) solid 1px;
-    box-shadow: 0.25rem 0.25rem var(--card-shadow, var(--card-border, var(--black)));
-    background-color: var(--card-background);
+    border: var(--card-border, var(--text)) solid 1px;
+    box-shadow: 0.25rem 0.25rem var(--card-shadow, var(--card-border, var(--text)));
+    background-color: var(--card-bg);
     border-radius: 1rem;
     color: var(--card-text);
 }
 
 .card-pink {
-    --card-border: var(--pink3);
-    --card-background: var(--pink1);
-    --card-text: var(--pink4);
+    --card-border: var(--pink-border);
+    --card-bg: var(--pink-bg);
+    --card-text: var(--pink-text);
 }
 .card-blue {
-    --card-border: var(--blue3);
-    --card-background: var(--blue1);
-    --card-text: var(--blue4);
+    --card-border: var(--blue-border);
+    --card-bg: var(--blue-bg);
+    --card-text: var(--blue-text);
 }
 
 @media screen and (max-width: 40rem) {

@@ -43,7 +43,7 @@ import Right from "~icons/hugeicons/arrow-right-01";
     header {
         grid-area: sidebar;
 /*         background-color: var(--rose-4); */
-        color: black;
+        color: var(--text);
 
 
         height: calc(100vh + var(--zigzag-size));
@@ -54,15 +54,15 @@ import Right from "~icons/hugeicons/arrow-right-01";
         position: sticky;
         top: calc(-1 * var(--zigzag-size));
 
-        filter: drop-shadow(.25rem .125rem 0 var(--pink3));
+        filter: drop-shadow(.25rem .125rem 0 var(--pink-border));
     }
 
     .zigzag-effect {
         /* cool stuff from https://css-tricks.com/css-borders-using-masks/ */
 
         --angle: 90deg;
-        --zigzag-border: var(--pink3);
-        --background: var(--pink1);
+        --zigzag-border: var(--pink-border);
+        --background: var(--pink-bg);
 
         mask-image: conic-gradient(
             from calc(270deg - var(--angle)/2) at calc(100%),
@@ -170,7 +170,7 @@ import Right from "~icons/hugeicons/arrow-right-01";
                 content: '';
                 position: absolute;
                 inset: 0;
-                background-color: var(--blue1);
+                background-color: var(--blue-bg);
                 z-index: -1;
 
                 filter: blur(50px);
@@ -186,7 +186,7 @@ import Right from "~icons/hugeicons/arrow-right-01";
 
     .links {
         grid-area: link;
-        border: 1px dashed var(--pink3);
+        border: 1px dashed var(--pink-border);
         border-radius: .5rem;
         align-self: center;
         display: flex;
@@ -218,7 +218,7 @@ import Right from "~icons/hugeicons/arrow-right-01";
             height: auto;
             position: initial;
             margin: 0;
-            filter: drop-shadow(.125rem .25rem 0 var(--pink3));
+            filter: drop-shadow(.125rem .25rem 0 var(--pink-border));
         }
         .layout {
             height: auto;

@@ -51,7 +51,7 @@ import Sfml from "~icons/simple-icons/sfml";
             calc(var(--rows) * var(--row-ratio));
 
         grid-template-columns: repeat(var(--cols), 1fr);
-        grid-template-rows: repeat(var(--rows), auto);
+        grid-template-rows: repeat(var(--rows), 1fr);
         max-width: 50rem;
         width: 100%;
         margin: 0 auto;
@@ -62,6 +62,8 @@ import Sfml from "~icons/simple-icons/sfml";
     .tech1,
     .tech2,
     .tech3 {
+        min-width: 0;
+        min-height: 0;
         align-self: stretch;
         border-radius: 1rem;
         display: flex;
