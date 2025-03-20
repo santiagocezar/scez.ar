@@ -16,23 +16,21 @@ const otherProjects = other as {
 }[]
 ---
 
-<section>
-    {
-        experience.map((p) => (
-            <div class="content card-pink">
-                <header>
-                    <h3>{p.data.title}</h3>
-                    <div class="date">
-                        desde {p.data.since}
-                    </div>
-                </header>
-                <section>
-                    <Fragment set:html={p.rendered?.html ?? ""} />
-                </section>
-            </div>
-        ))
-    }
-</section>
+{
+    experience.map((p) => (
+        <div class="content card-pink">
+            <header>
+                <h3>{p.data.title}</h3>
+                <div class="date">
+                    desde {p.data.since}
+                </div>
+            </header>
+            <section>
+                <Fragment set:html={p.rendered?.html ?? ""} />
+            </section>
+        </div>
+    ))
+}
 
 <style>
     .content {
