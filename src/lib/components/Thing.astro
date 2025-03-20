@@ -30,13 +30,6 @@ const compact = name.length > 14;
     </div>
     <Image src={capture} alt={alt} class="preview" />
     {
-        action && actionHref && (
-            <a class="action" href={actionHref}>
-                {action}
-            </a>
-        )
-    }
-    {
         logo ? (
             <Image src={logo} alt={name} class="title" />
         ) : (
@@ -49,12 +42,12 @@ const compact = name.length > 14;
     .featured-card {
         display: grid;
         grid-template:
-            "logo .       .    desc .   .       .  " 2rem
-            ".    logoimg .    .    .   .       .  " 2rem
-            ".    .       .    .    .   .       .  " auto
-            ".    .       .    .    .   descact .  " auto
-            ".    .       .    img  .   .       act" 1rem
-           / 1rem 1.5fr   auto 1rem 3fr 1fr     1rem;
+            "logo .       .    desc .   .      " 2rem
+            ".    logoimg .    .    .   .      " 2rem
+            ".    .       .    .    .   .      " auto
+            ".    .       .    .    .   descend" auto
+            ".    .       .    img  .   .      " 1rem
+           / 1rem 1.5fr   auto 1rem 3fr 1fr    ;
 
         color: #040624;
         width: 100%;
@@ -74,10 +67,7 @@ const compact = name.length > 14;
         grid-area: logoimg  / logoimg / img / img;
     }
     .content {
-        grid-area: desc / desc / descact / descact;
-    }
-    .action {
-        grid-area: descact / descact / act / act;
+        grid-area: desc / desc / descend / descend;
     }
     .preview {
         border: black solid 1px;
@@ -112,48 +102,4 @@ const compact = name.length > 14;
         width: auto;
         object-fit: contain;
     }
-
-    .action {
-        border: var(--pink3) solid 1px;
-        box-shadow: .25rem .25rem var(--pink3);
-        background-color: var(--pink1);
-        border-radius: 1rem;
-        align-self: end;
-        justify-self: end;
-        white-space: nowrap;
-        padding: 0.5em 1em;
-        color: var(--pink4);
-        font-weight: bold;
-        text-decoration: none;
-        z-index: 1;
-
-        transition: box-shadow 0.2s ease;
-        &:hover {
-            box-shadow: -0.3em 0.2em #f64b95, 0.3em -0.2em #00a6d2;
-            &:active {
-                box-shadow: none;
-                background-color: #6442a0;
-            }
-        }
-    }
-    /*
-    @media screen and (max-width: 40rem) {
-        .featured-card {
-            grid-template-columns: 1rem 1fr 1rem;
-            grid-template-rows: 1fr 2rem auto 1rem 1rem;
-
-            font-size: 1.5rem;
-        }
-        .preview {
-            grid-area: 1 / 1 / 3 / 3;
-        }
-        .content {
-            grid-area: 2/2/5/4;
-            padding: 1em 1em 3em 1em;
-        }
-        .action {
-            grid-row-end: -1;
-            grid-column-end: -2;
-        }
-    }*/
 </style>
