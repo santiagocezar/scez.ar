@@ -114,8 +114,6 @@ import Right from "~icons/hugeicons/arrow-right-01";
     .title {
         grid-area: logo;
         font-size: 0.75rem;
-        padding-left: 1.5rem;
-        padding-right: 2rem;
 /*         justify-self: start; */
     }
 
@@ -191,7 +189,7 @@ import Right from "~icons/hugeicons/arrow-right-01";
         grid-area: link;
         border: 1px dashed var(--pink-border);
         border-radius: .5rem;
-        align-self: center;
+        align-self: end;
         display: flex;
         margin: 1rem;
 
@@ -241,9 +239,12 @@ import Right from "~icons/hugeicons/arrow-right-01";
         .layout {
             grid-template:
                 "logo nav" auto
-                "link nav" auto
+                "link nav" 1fr
                 / 1fr auto;
             justify-items: start;
+        }
+        .links {
+            margin: 0;
         }
     }
     @media screen and (max-width: 40rem) {
