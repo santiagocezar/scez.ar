@@ -7,7 +7,6 @@ import other from "src/content/other_projects.yml"
 const projects = (await getCollection("projects")).sort(
     (a, b) => a.data.order - b.data.order,
 );
-console.log((await getCollection("projects")).map((p) => p.data.order));
 
 const otherProjects = other as {
     name: string
