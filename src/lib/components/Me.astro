@@ -33,6 +33,11 @@ if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate())
         
         --image-size: 9rem;
     }
+    :global(.my-name) {
+        background-image: linear-gradient(to right in oklch, var(--blue-border), var(--pink-border));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     section {
         grid-area: t;
         padding: 1em;

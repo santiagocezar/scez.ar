@@ -1,4 +1,4 @@
-Soy **Santiago Cézar**, desarrollador y diseñador de software. Uso este espacio para crear y compartir **herramientas** útiles para otros y para mí.
+Soy **<span class="my-name">Santiago Cézar</span>**, desarrollador y diseñador de software. Uso este espacio para crear y compartir **herramientas** útiles para otros y para mí.
 
 Estoy cursando el 3° año de la **Ingeniería en Sistemas de Información** en la UTN, tras finalizar el secundario como **Técnico en Programación**.
 
