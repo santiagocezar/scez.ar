@@ -1,8 +1,8 @@
 ---
-import Me from "$lib/components/Me.astro";
-import Tech from "$lib/components/Tech.astro";
-import Projects from "$lib/components/Projects.astro";
-import Experience from "$lib/components/Experience.astro";
+import Me from "$lib/sections/Me.astro";
+import Tech from "$lib/sections/Tech.astro";
+import Projects from "$lib/sections/Projects.astro";
+import Experience from "$lib/sections/Experience.astro";
 import Main from "$lib/layouts/Main.astro";
 ---
 
@@ -15,7 +15,39 @@ import Main from "$lib/layouts/Main.astro";
     <Experience />
     <h2 id="tech">Tecnologías</h2>
     <Tech />
+    <h2 id="cont">Contacto</h2>
+    <form id="contact-form" action="#" method="post" enctype="text/plain">
+        <label>
+            <span>Asunto</span>
+            <input class="card" name="subject" type="text">
+        </label>
+        <label>
+            <span>Mensaje</span>
+            <textarea class="card" name="body"></textarea>
+        </label>
+        <button class="card-blue">Enviar</button>
+    </form>
 </Main>
+
+<script>
+    function sendEmail(ev: SubmitEvent) {
+        if (ev.target instanceof HTMLFormElement) {
+            ev.preventDefault()
+            
+            const data = new FormData(ev.target)
+            const params = new URLSearchParams({
+                subject: data.get("subject")?.toString() ?? "",
+                body: data.get("body")?.toString() ?? "",
+            })
+
+            const stringParams = params.toString().replaceAll("+", "%20")
+
+            location.href = `mailto:santiagocezar2013@gmail.com?${stringParams}`
+        }
+    }
+
+    document.getElementById("contact-form")?.addEventListener("submit", sendEmail)
+</script>
 
 <style>
 #about-me {
@@ -25,6 +57,33 @@ import Main from "$lib/layouts/Main.astro";
     padding: 4em 2rem;
     blockquote {
         max-width: 16em;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & label {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+    }
+
+    & span, button {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    & button {
+        padding: .5rem 1rem;
+        align-self: start;
+    }
+
+    & input, textarea {
+        padding: .5rem 1rem;
+        background-color: var(--bg);
     }
 }
 </style>

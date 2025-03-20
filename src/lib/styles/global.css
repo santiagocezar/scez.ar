@@ -16,6 +16,7 @@
     --white: #fff;
 
     --text: var(--black);
+    --bg: white;
 
     --pink1: #fceeed;
     --pink2: #ffbec9;
@@ -53,7 +54,7 @@
 
     --c: color-mix(in srgb, transparent, var(--pink-border) 5%);
         
-    background-color: white;
+    background-color: var(--bg);
     background-image: 
         repeating-linear-gradient(45deg, var(--c) 0, var(--c) 2rem, #0000 2rem, #0000 4rem),
         repeating-linear-gradient(135deg, var(--c) 0, var(--c) 2rem, #0000 2rem, #0000 4rem);
@@ -74,7 +75,7 @@
         --blue-border: var(--blue2);
         --blue-text: var(--blue0);
         
-        background-color: var(--black);
+        --bg: var(--black);
         --text: var(--white);
         --c: color-mix(in srgb, transparent, var(--pink-border) 5%)
     }
