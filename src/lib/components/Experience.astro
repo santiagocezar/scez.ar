@@ -1,0 +1,61 @@
+---
+import * as assets from "src/content/assets";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import other from "src/content/other_projects.yml"
+
+const experience = (await getCollection("experience")).sort(
+    (a, b) => a.data.order - b.data.order,
+);
+console.log((await getCollection("experience")).map((p) => p.data.order));
+
+const otherProjects = other as {
+    name: string
+    about: string
+    year: number
+    link: string
+}[]
+---
+
+{
+    experience.map((p) => (
+        <div class="content card-pink">
+            <header>
+                <h3>{p.data.title}</h3>
+                <div class="date">
+                    desde {p.data.since}
+                </div>
+            </header>
+            <section>
+                <Fragment set:html={p.rendered?.html ?? ""} />
+            </section>
+        </div>
+    ))
+}
+
+<style>
+    .content {
+        font-size: 1.25rem;
+
+    }
+    header {
+        position: relative;
+        border-bottom: 1px dashed var(--pink-border);
+        padding: 1rem 2rem 1rem 2.5rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2rem;
+    }
+    h3 {
+        font-size: 1.35rem;
+        line-height: 1.2;
+        font-weight: bold;
+    }
+    .date {
+        color: var(--blue-border);
+    }
+    section {
+        padding: 1.5rem 2rem 1.5rem 2.5rem;
+    }
+
+</style>
