@@ -66,18 +66,6 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        /* --pink0: #fef4f6;
-        --pink1: #ffdee6;
-        --pink2: #ec7fa4;
-        --pink3: #7b2749;
-        --pink4: #580a2e;
-    
-        --blue0: #eaf0f8;
-        --blue1: #c9e0fe;
-        --blue2: #7796ff;
-        --blue3: #3346d1;
-        --blue4: #240650; */
-        
         --pink-bg: var(--pink4);
         --pink-border: var(--pink2);
         --pink-text: var(--pink0);
