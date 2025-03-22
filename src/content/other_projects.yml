@@ -1,34 +1,41 @@
 - 
+  id: dodgestar
   name: DodgeStar
   about: Un juego sobre esquivar cuerpos celestiales
   year: 2019
   link: https://aqua24j4.itch.io/dodgestar
 - 
+  id: icecold
   name: Ice Cold
   about: Fondo de pantalla para KDE 5.16
   year: 2019
   link: https://www.omgubuntu.co.uk/2019/06/kde-plasma-5-16-wallpaper
 - 
+  id: piwrite
   name: πWrite
   about: Método de entrada de texto para usar con joysticks
   year: 2020
   link: https://github.com/santiagocezar/piwrite
 - 
+  id: maniatic
   name: Maniatic Launcher
   about: Lanzador para la decompilación de Sonic Mania
   year: 2022
   link: https://flathub.org/apps/io.github.santiagocezar.maniatic-launcher
 - 
+  id: prism
   name: Iconos Prism Launcher
   about: Diseño de íconos modernos y agradables para personalizar instancias
   year: 2022
   link: https://github.com/PrismLauncher/PrismLauncher/pull/238
 - 
+  id: gengir
   name: Gengir
   about: Generación de tipos para usar IntelliSense con PyGObject
   year: 2022
   link: https://github.com/santiagocezar/gengir
 - 
+  id: tangram
   name: Tangram
   about: Experiencia interactiva para el Museo Interactivo de Ciencias 
   year: 2024
