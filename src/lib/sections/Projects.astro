@@ -38,13 +38,8 @@ const otherProjects = (await getCollection("otherProjects"));
             </div>
         ))
     }
-</div>
-
-<details class="other-details card-pink">
-    <summary>
-        Otros
-    </summary>
-    <section class="other">
+    <section class="other card-blue">
+        <h2>Otros proyectos</h2>
         {otherProjects.map(({data}) => (
             <div class="item">
                 <p class="name">
@@ -55,7 +50,8 @@ const otherProjects = (await getCollection("otherProjects"));
             </div>
         ))}
     </section>
-</details>
+</div>
+
 
 <style>
     .other-details {
@@ -76,10 +72,17 @@ const otherProjects = (await getCollection("otherProjects"));
             display: grid;
             grid-template-columns: subgrid;
             grid-column: 1 / -1;
-            border-top: 1px dashed var(--pink-border);
+            border-top: 1px dashed var(--blue-border);
             padding: 1rem;
             gap: 1rem;
             align-items: start;
+        }
+
+        & h2 {
+            color: black;
+            background-color: white;
+            font-size: 1.5rem;
+            wid
         }
 
         & p {
@@ -127,23 +130,26 @@ const otherProjects = (await getCollection("otherProjects"));
         flex-grow: 1;
         font-size: 1.25rem;
 
-        & header {
-            border-radius: 1rem 1rem 0 0;
-            background-color: white;
-            border-bottom: 1px dashed var(--blue3);
-            padding: 1rem 1rem 1rem 2.5rem;
-
-            img {
-                width: auto;
-                object-fit: contain;
-                height: 3rem;
-                max-width: 15rem;
-            }
-        }
         & section {
             padding: 1.5rem 2rem 1.5rem 2.5rem;
         }
     }
+    .other h2,
+    .content header {
+        border-radius: 1rem 1rem 0 0;
+        background-color: white;
+        border-bottom: 1px dashed var(--blue3);
+        padding: 1rem 1rem 1rem 2.5rem;
+        grid-column: 1 / -1;
+
+        img {
+            width: auto;
+            object-fit: contain;
+            height: 3rem;
+            max-width: 15rem;
+        }        
+    }
+
     &.compact .content .title {
         font-size: 1.5em;
     }
