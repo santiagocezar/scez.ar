@@ -19,9 +19,9 @@ if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate())
 ---
 
 <div class="root">
-    <section class="card-blue" set:html={content.replace('@age@', "" + age)}>
+    <article class="card-blue" set:html={content.replace('@age@', "" + age)}>
         <div class="blank"></div>
-    </section>
+    </article>
     <Image class="card img" alt="Una foto mía con un arcoiris detrás" src={meJpg}>
 </div>
 
@@ -36,8 +36,7 @@ if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate())
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    section {
-        grid-area: t;
+    article {
         padding: 1em;
         line-height: 1.4;
         border-radius: 1em;
