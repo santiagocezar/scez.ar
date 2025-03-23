@@ -20,6 +20,7 @@ const otherProjects = (await getCollection("otherProjects"));
                         <Image src={data.logosrc} alt={data.logoalt} />
                     </header>
                     <article>
+                        <div class="blank"></div>
                         <Fragment set:html={rendered?.html ?? ""} />
                         {data.href && (
                             <p>
@@ -76,7 +77,7 @@ const otherProjects = (await getCollection("otherProjects"));
         gap: 3rem;
 
         --header-height: 4rem;
-        --pic-height: calc(var(--header-height) * 3);
+        --pic-height: calc(var(--header-height) * 2.5);
     }
 
     .featured {
@@ -101,6 +102,7 @@ const otherProjects = (await getCollection("otherProjects"));
 
         & article {
             padding: 1.5rem 2rem 1.5rem 2.5rem;
+            text-align: balance;
         }
 
         & header {
@@ -168,10 +170,9 @@ const otherProjects = (await getCollection("otherProjects"));
         font-size: 1.5em;
     }
 
-    @media screen and (max-width: 40rem) {
+    @media screen and (max-width: 70rem) {
         .projects {
-            grid-template-rows: 1fr;
-            grid-auto-flow: row;
+            grid-column: col-start 1 / col-end -1;
         }
         .featured {
             flex-direction: column-reverse;
@@ -179,24 +180,40 @@ const otherProjects = (await getCollection("otherProjects"));
             & .pic {
                 height: var(--pic-height);
                 width: auto;
+                margin: 0;
+                margin-bottom: calc(-1 * var(--pic-height));
+                align-self: start;
+                translate: -0.5rem -0.5rem;
+            }
+
+            & .blank {
+                height: calc(var(--pic-height) - var(--header-height) - 1rem);
+                width: calc(var(--pic-height));
+                float: left;
             }
 
             & header {
-                padding-left: 1.5rem;
+                padding-left: calc(var(--pic-height) + 1rem);
 
                 & img {
-                    max-width: calc(100% - var(--pic-height));
+                    max-width: 100%;
                 }
             }
 
             & section {
-                z-index: 1;
-                margin-right: 1rem;
             }
 
             & article {
                 padding: 0.75rem 1rem 1.5rem 1rem;
             }
+        }
+        .other {
+        }
+    }
+    @media screen and (max-width: 40rem) {
+        .projects {
+            grid-template-rows: 1fr;
+            grid-auto-flow: row;
         }
         .other {
             grid-template-columns: 1fr auto;
@@ -207,6 +224,7 @@ const otherProjects = (await getCollection("otherProjects"));
             }
             & .year {
                 font-weight: bold;
+                text-align: right;
                 order: 1;
             }
         }
