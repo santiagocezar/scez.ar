@@ -28,7 +28,7 @@ const otherProjects = (await getCollection("otherProjects"));
                         <Fragment set:html={rendered?.html ?? ""} />
                         {data.href && (
                             <p>
-                                <a href={data.href}>
+                                <a target="_blank" href={data.href}>
                                     {data.hreflabel ?? "Abrir"}
                                 </a>
                             </p>

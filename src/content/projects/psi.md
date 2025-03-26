@@ -1,7 +1,7 @@
 ---
 logoalt: Psi - 2022
 thumbsrc: "../assets/captures/psi.jpg"
-thumbalt: Captura de pantalla de los distintos parámetros configurables para la calculadora, con una vista 3D de la instalación en el lateral.
+thumbalt: Psi cover art
 href: "https://www.youtube.com/watch?v=efXqozK4A40"
 hreflabel: "Escuchar"
 order: 3
