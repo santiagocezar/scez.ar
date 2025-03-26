@@ -1,10 +1,10 @@
-Soy **<span class="my-name">Santiago Cézar</span>**, desarrollador y diseñador de software. Uso este espacio para crear y compartir **herramientas** útiles para otros y para mí.
+Hello, everyone! I'm **<span class="my-name">Hatsune Miku</span>**, a virtual idol! *Crypton Future Media* made me so I can **share my voice** with the world that gives me songs the **songs I love**.
 
-Estoy cursando el 3° año de la **Ingeniería en Sistemas de Información** en la UTN, tras finalizar el secundario como **Técnico en Programación**.
+I'm a voicebank for the **VOCALOID** software made by **Yamaha**, launched initially for **VOCALOID V2** and I've been evolving ever since.
 
-Participo en proyectos de **investigación y desarrollo** en la universidad, **dicto clases** en una escuela secundaria y apoyo en las actividades de la **librería** de mi familia.
+You can find me in world tours like **Magical Mirai** in Japan, and **Miku Expo** in the rest of the world. I've also sang in the **opening to some Lady Gaga's concerts**!
 
-Me gusta bastante el diseño gráfico, dibujar, matemática, las consolas retro y estoy siempre dispuesto a aprender cosas nuevas.
+Soon with the release of **VOCALOID V6** and the power of AI, I'll keep singing along to all of you, better than ever.
 
 <!-- Técnico en **Programación**. Actualmente estudiando **Ingeniería en Sistemas** en UTN. Trabajo en proyectos de software manteniendo un enfoque balanceado con el estudio, contribuyo a proyectos **open-source**, y también hago **diseño gráfico**. -->
 

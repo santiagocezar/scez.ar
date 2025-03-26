@@ -17,7 +17,11 @@ const otherProjects = (await getCollection("otherProjects"));
             <div class="featured">
                 <section class="card-blue">
                     <header>
-                        <Image src={data.logosrc} alt={data.logoalt} />
+                        {data.logosrc ? (
+                            <Image src={data.logosrc} alt={data.logoalt} />
+                        ) : (
+                            data.logoalt
+                        )}
                     </header>
                     <article>
                         <div class="blank"></div>
@@ -39,7 +43,7 @@ const otherProjects = (await getCollection("otherProjects"));
             </div>
         ))
     }
-    <section class="other card-blue">
+    <!-- <section class="other card-blue">
         <h2>Otros proyectos</h2>
         
         <article>
@@ -55,7 +59,7 @@ const otherProjects = (await getCollection("otherProjects"));
                 ))}
             </ul>
         </article>
-    </section>
+    </section> -->
 </div>
 
 
@@ -107,6 +111,8 @@ const otherProjects = (await getCollection("otherProjects"));
 
         & header {
             border-bottom: 1px dashed var(--blue3);
+            font-weight: bold;
+            line-height: 1.2;
         }
     }
 

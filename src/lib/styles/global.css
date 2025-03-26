@@ -18,27 +18,17 @@
     --text: var(--black);
     --bg: white;
 
-    --pink1: #fceeed;
-    --pink2: #ffbec9;
-    --pink3: #ff4294;
-    --pink4: #5F0C21;
-
-    --blue1: #dbf4ff;
-    --blue2: #a5c2ff;
-    --blue3: #3334fc;
-    --blue4: #240650;
-
     --pink0: #fef4f6;
     --pink1: #ffdee6;
     --pink2: #ec7fa4;
     --pink3: #c2216c;
     --pink4: #2a0d18;
 
-    --blue0: #eaf0f8;
-    --blue1: #c9e0fe;
-    --blue2: #7796ff;
-    --blue3: #3346d1;
-    --blue4: #0b1023;
+    --blue0: hsl(204, 20%, 95%);
+    --blue1: hsl(194, 89%, 93%);
+    --blue2: hsl(187, 100%, 73%);
+    --blue3: hsl(187, 63%, 51%);
+    --blue4: hsl(185, 52%, 9%);
 
     --pink-bg: var(--pink0);
     --pink-border: var(--pink3);

@@ -1,10 +1,7 @@
 ---
 order: 0
-title: Museo Interactivo de Ciencias (MUIC)
-since: "2023"
+title: Miku Expo
+since: "2014"
 ---
 
-Participación en grupo de I+D UTN, desarrollo de muestras interactivas en
-diferentes eventos desarrollados en San Francisco. Además, se gestaron proyectos
-de divulgación y recibió a visitantes de nivel inicial, primario, secundario,
-universitario y público en general.
+World tours organized by Crypton Future Media starring Hatsune Miku. The performances include notable user-created Vocaloid songs and digital choreography of Miku and other Crypton characters dancing. As of 2024, the tour consisted of 82 shows spanning the continents of Asia, North America, Europe and Oceania. 

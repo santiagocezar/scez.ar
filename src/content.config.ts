@@ -8,7 +8,7 @@ const projects = defineCollection({
         order: z.number(),
         thumbsrc: image(),
         thumbalt: z.string(),
-        logosrc: image(),
+        logosrc: z.optional(image()),
         logoalt: z.string(),
         href: z.optional(z.string()),
         hreflabel: z.optional(z.string()),
