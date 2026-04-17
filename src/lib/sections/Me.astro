@@ -1,40 +1,47 @@
 ---
 import { Image } from "astro:assets";
 import * as doc from "./me.md";
-import meJpg from "src/content/assets/me.jpg"
+import meJpg from "src/content/assets/me.jpg";
+import { NameLogo } from "src/content/assets";
 
-const content = await doc.compiledContent()
+const content = await doc.compiledContent();
 
 const birthday = new Date(2004, 5, 24);
 const now = new Date();
 
 let age = now.getFullYear() - birthday.getFullYear();
-if (now.getMonth() == birthday.getMonth() && now.getDate() < birthday.getDate()) {
-    age--
+if (
+    now.getMonth() == birthday.getMonth() &&
+    now.getDate() < birthday.getDate()
+) {
+    age--;
 } else if (now.getMonth() < birthday.getMonth()) {
-    age--
+    age--;
 }
-
-
 ---
 
 <div class="root">
-    <article class="card-blue" set:html={content.replace('@age@', "" + age)}>
+    <article class="card-blue">
         <div class="blank"></div>
+        <NameLogo class="name" />
+        <Fragment set:html={content.replace("@age@", "" + age)} />
     </article>
-    <Image class="card img" alt="Una foto mía con un arcoiris detrás" src={meJpg}>
+    <Image
+        class="card img"
+        alt="Una foto mía con un arcoiris detrás"
+        src={meJpg}
+    />
 </div>
 
 <style>
     .root {
         position: relative;
-        
+
         --image-size: 9rem;
     }
-    :global(.my-name) {
-        background-image: linear-gradient(to right in oklch, var(--blue-border), var(--pink-border));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .name {
+        width: auto;
+        height: 3rem;
     }
     article {
         padding: 1em;

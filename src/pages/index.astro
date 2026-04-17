@@ -15,75 +15,67 @@ import Main from "$lib/layouts/Main.astro";
     <Experience />
     <h2 id="tech">Tecnologías</h2>
     <Tech />
-    <h2 id="cont">Contacto</h2>
-    <form id="contact-form" action="#" method="post" enctype="text/plain">
-        <label>
-            <span>Asunto</span>
-            <input class="card" name="subject" type="text">
-        </label>
-        <label>
-            <span>Mensaje</span>
-            <textarea class="card" name="body"></textarea>
-        </label>
-        <button class="card-blue">Enviar</button>
-    </form>
 </Main>
 
 <script>
     function sendEmail(ev: SubmitEvent) {
         if (ev.target instanceof HTMLFormElement) {
-            ev.preventDefault()
-            
-            const data = new FormData(ev.target)
+            ev.preventDefault();
+
+            const data = new FormData(ev.target);
             const params = new URLSearchParams({
                 subject: data.get("subject")?.toString() ?? "",
                 body: data.get("body")?.toString() ?? "",
-            })
+            });
 
-            const stringParams = params.toString().replaceAll("+", "%20")
+            const stringParams = params.toString().replaceAll("+", "%20");
 
-            location.href = `mailto:santiagocezar2013@gmail.com?${stringParams}`
+            location.href = `mailto:santiagocezar2013@gmail.com?${stringParams}`;
         }
     }
 
-    document.getElementById("contact-form")?.addEventListener("submit", sendEmail)
+    document
+        .getElementById("contact-form")
+        ?.addEventListener("submit", sendEmail);
 </script>
 
 <style>
-#about-me {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 4em 2rem;
-    blockquote {
-        max-width: 16em;
+    #about-me {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 4em 2rem;
+        blockquote {
+            max-width: 16em;
+        }
     }
-}
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    & label {
+    form {
         display: flex;
         flex-direction: column;
-        gap: .25rem;
-    }
+        gap: 1rem;
 
-    & span, button {
-        font-size: 1.25rem;
-        font-weight: bold;
-    }
+        & label {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
 
-    & button {
-        padding: .5rem 1rem;
-        align-self: start;
-    }
+        & span,
+        button {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
 
-    & input, textarea {
-        padding: .5rem 1rem;
-        background-color: var(--bg);
+        & button {
+            padding: 0.5rem 1rem;
+            align-self: start;
+        }
+
+        & input,
+        textarea {
+            padding: 0.5rem 1rem;
+            background-color: var(--bg);
+        }
     }
-}
 </style>
